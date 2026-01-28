@@ -19,6 +19,7 @@ import './modules/sovereignty/sovereignty.css';
 import './modules/tooling/tooling.css';
 import './modules/specs-list/specs-list.css';
 import './modules/deep-tech/deep-tech.css';
+import './modules/asset/asset.css';
 
 import { initNavbar } from './modules/navbar/navbar.ts';
 import { initKeyboardShortcuts } from './modules/keyboard/keyboard.ts';
