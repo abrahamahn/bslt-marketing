@@ -46,21 +46,10 @@ export function initKeyboardShortcuts(): () => void {
       return;
     }
 
-    // Ignore if modifier keys are pressed (except for Cmd+K)
-    if (event.ctrlKey || event.altKey || event.shiftKey) {
+    // Ignore if modifier keys are pressed (Cmd+K handled by command palette)
+    if (event.ctrlKey || event.altKey || event.shiftKey || event.metaKey) {
       return;
     }
-
-    // Handle meta key (Cmd on Mac) for command palette
-    if (event.metaKey && event.key === 'k') {
-      event.preventDefault();
-      // Command palette - future feature
-      console.info('Command palette coming soon. Use G for GitHub, D for Docs, P for Pricing.');
-      return;
-    }
-
-    // Don't process if meta key is held
-    if (event.metaKey) return;
 
     const shortcut = SHORTCUTS.find((s) => s.key === event.key.toLowerCase());
     if (shortcut) {

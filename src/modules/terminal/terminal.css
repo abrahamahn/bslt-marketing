@@ -1,0 +1,229 @@
+/* src/modules/terminal/terminal.css */
+
+/* Terminal Window */
+.terminal {
+  background: linear-gradient(180deg, var(--color-panel), var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+  max-width: 520px;
+  width: 100%;
+}
+
+/* Terminal Header (macOS chrome) */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--color-panel-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+}
+
+.terminal-dot--red {
+  background: #ff5f57;
+}
+
+.terminal-dot--yellow {
+  background: #febc2e;
+}
+
+.terminal-dot--green {
+  background: #28c840;
+}
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-faint);
+  font-family: var(--font-mono);
+}
+
+/* Terminal Body */
+.terminal-body {
+  padding: 16px;
+  min-height: 200px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+/* Terminal Prompt */
+.terminal-prompt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.terminal-prompt-symbol {
+  color: var(--color-ok);
+  font-weight: 600;
+}
+
+.terminal-input {
+  color: var(--color-text);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--color-magma);
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+.terminal-cursor--hidden {
+  display: none;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Terminal Output */
+.terminal-output {
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-muted);
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  min-height: 18px;
+}
+
+.terminal-success {
+  color: var(--color-ok);
+  font-weight: 600;
+}
+
+.terminal-muted {
+  color: var(--color-faint);
+}
+
+/* Copy Command Box */
+.copy-command-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  max-width: 520px;
+  transition: border-color var(--transition-default);
+}
+
+.copy-command-box:hover {
+  border-color: var(--color-border-hover);
+}
+
+.command-text {
+  flex: 1;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--color-text);
+  user-select: all;
+}
+
+.copy-command {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.copy-command:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-border-hover);
+  color: var(--color-text);
+}
+
+.copy-command--copied {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: var(--color-ok);
+}
+
+.copy-command svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Copy icon states */
+.copy-command .icon-copy {
+  display: block;
+}
+
+.copy-command .icon-check {
+  display: none;
+}
+
+.copy-command--copied .icon-copy {
+  display: none;
+}
+
+.copy-command--copied .icon-check {
+  display: block;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .terminal-cursor {
+    animation: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal {
+    max-width: 100%;
+  }
+
+  .terminal-body {
+    padding: 12px;
+    min-height: 160px;
+  }
+
+  .copy-command-box {
+    max-width: 100%;
+  }
+}

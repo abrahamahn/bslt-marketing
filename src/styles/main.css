@@ -15,6 +15,11 @@ body {
     radial-gradient(ellipse 800px 400px at 80% 10%, rgba(255, 140, 90, 0.08), transparent 50%),
     var(--color-bg);
   min-height: 100%;
+  transition: opacity 0.15s ease-out;
+}
+
+body.loaded {
+  opacity: 1;
 }
 
 /* Layout Utilities */
@@ -74,6 +79,13 @@ body {
     0 0 30px rgba(255, 107, 53, 0.25);
 }
 
+.btn-time {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  opacity: 0.8;
+  margin-left: 4px;
+}
+
 /* Pills & Tags */
 .pill {
   display: inline-flex;
@@ -130,6 +142,7 @@ body {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-default);
   overflow: hidden;
+  cursor: pointer;
   transition:
     border-color var(--transition-default),
     box-shadow var(--transition-default);
@@ -137,6 +150,23 @@ body {
 
 .card:hover {
   border-color: var(--color-border-hover);
+}
+
+.card--featured {
+  background: radial-gradient(
+      ellipse 600px 300px at 10% 0%,
+      rgba(255, 107, 53, 0.08),
+      transparent 60%
+    ),
+    rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 107, 53, 0.2);
+}
+
+.card--featured:hover {
+  border-color: rgba(255, 107, 53, 0.35);
+  box-shadow:
+    var(--shadow-default),
+    0 0 40px rgba(255, 107, 53, 0.1);
 }
 
 .card .inner {
@@ -158,6 +188,7 @@ body {
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
   transition: border-color var(--transition-default);
 }
 

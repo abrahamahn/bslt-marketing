@@ -1,0 +1,159 @@
+/* src/modules/integrations-grid/integrations-grid.css */
+
+/* Integrations Section */
+.integrations-section {
+  padding: 48px 0;
+}
+
+/* Grid Container */
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Integration Item */
+.integration-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.integration-item:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-panel-alt);
+  transform: translateY(-2px);
+}
+
+.integration-item:focus-visible {
+  outline: 2px solid var(--color-magma);
+  outline-offset: 2px;
+}
+
+/* Icon */
+.integration-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(1) opacity(0.6);
+  transition: filter var(--transition-fast);
+}
+
+.integration-item:hover .integration-icon {
+  filter: grayscale(0) opacity(1);
+}
+
+.integration-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Name */
+.integration-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: color var(--transition-fast);
+}
+
+.integration-item:hover .integration-name {
+  color: var(--color-text);
+}
+
+/* Description Area */
+.integrations-description {
+  min-height: 24px;
+  font-size: 14px;
+  color: var(--color-faint);
+  transition: color var(--transition-fast);
+}
+
+.integrations-description--active {
+  color: var(--color-muted);
+}
+
+.integrations-description strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Category Colors */
+.integration-item[data-category="payment"] .integration-icon {
+  color: #635bff; /* Stripe purple */
+}
+
+.integration-item[data-category="auth"] .integration-icon {
+  color: #4285f4; /* Google blue */
+}
+
+.integration-item[data-category="ops"] .integration-icon {
+  color: #2496ed; /* Docker blue */
+}
+
+.integration-item[data-category="data"] .integration-icon {
+  color: #336791; /* PostgreSQL blue */
+}
+
+.integration-item[data-category="tools"] .integration-icon {
+  color: #f59e0b; /* PostHog amber */
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .integrations-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .integrations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .integration-item {
+    padding: 12px 8px;
+  }
+
+  .integration-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .integration-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .integrations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .integration-item {
+    transition: none;
+  }
+
+  .integration-icon {
+    transition: none;
+  }
+}

@@ -6,7 +6,7 @@ header {
   top: 0;
   z-index: var(--z-header);
   background: transparent;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid var(--color-border);
   transition:
     background var(--transition-default),
     border-color var(--transition-default),
@@ -43,14 +43,9 @@ header.header--scrolled {
   opacity: 0.8;
 }
 
-.logo {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, var(--color-magma), var(--color-magma-deep));
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
-    var(--shadow-glow);
+.logo-svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
 }
 
 .nav-links {
@@ -61,10 +56,10 @@ header.header--scrolled {
 }
 
 .nav-links a {
-  color: var(--color-muted);
+  color: var(--color-text);
   font-weight: 500;
-  font-size: 14px;
-  padding: 8px 12px;
+  font-size: 15px;
+  padding: 8px 14px;
   border-radius: var(--radius-sm);
   transition:
     background var(--transition-fast),

@@ -1,0 +1,140 @@
+/* src/modules/social-proof/social-proof.css */
+
+/* Social Proof Section */
+.social-proof {
+  padding: 80px 0;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+/* Testimonial Card */
+.testimonial {
+  padding: 24px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition-default);
+}
+
+.testimonial:hover {
+  border-color: var(--color-border-hover);
+}
+
+.testimonial-content {
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-magma), var(--color-magma-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--color-faint);
+}
+
+/* Built With Showcase */
+.built-with {
+  text-align: center;
+}
+
+.built-with-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.built-with-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.built-with-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition:
+    border-color var(--transition-default),
+    background var(--transition-default);
+}
+
+.built-with-item:hover {
+  border-color: var(--color-border-hover);
+  background: var(--color-panel-alt);
+}
+
+.built-with-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+}
+
+.built-with-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .built-with-grid {
+    gap: 16px;
+  }
+}

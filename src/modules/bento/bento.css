@@ -1,0 +1,531 @@
+/* src/modules/bento/bento.css */
+
+/* Bento Header Section */
+.bento-header-section {
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+
+/* Bento Section */
+.bento-section {
+  padding: 0;
+  border-top: none;
+}
+
+/* Bento Grid Container */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0;
+  width: 100%;
+}
+
+/* Bento Card Base */
+.bento-card {
+  position: relative;
+  padding: 40px;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  cursor: pointer;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    border-color var(--transition-default);
+}
+
+/* Remove duplicate borders */
+.bento-card:nth-child(2),
+.bento-card:nth-child(4) {
+  border-left: none;
+}
+
+.bento-card:nth-child(3),
+.bento-card:nth-child(4) {
+  border-top: none;
+}
+
+.bento-card:hover {
+  border-color: var(--color-border-hover);
+}
+
+.bento-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Header */
+.bento-card-header {
+  margin-bottom: 20px;
+}
+
+.bento-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.bento-card-desc {
+  font-size: 15px;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* Visual Container */
+.bento-visual {
+  position: relative;
+  margin-top: 16px;
+}
+
+/* === Card 1: Monorepo Structure === */
+.folder-tree {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted);
+  line-height: 1.8;
+}
+
+.folder-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+
+.folder-item--highlight {
+  color: var(--color-magma);
+}
+
+.folder-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--color-faint);
+}
+
+.folder-item--highlight .folder-icon {
+  color: var(--color-magma);
+}
+
+.folder-indent {
+  padding-left: 20px;
+}
+
+.folder-indent-2 {
+  padding-left: 40px;
+}
+
+/* === Card 2: Type Safety Flow === */
+.type-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.type-flow-step {
+  flex: 1;
+  padding: 12px 8px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.type-flow-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 8px;
+  color: var(--color-faint);
+}
+
+.type-flow-step:nth-child(1) .type-flow-icon {
+  color: #336791; /* PostgreSQL blue */
+}
+
+.type-flow-step:nth-child(3) .type-flow-icon {
+  color: var(--color-magma);
+}
+
+.type-flow-step:nth-child(5) .type-flow-icon {
+  color: #61dafb; /* React blue */
+}
+
+.type-flow-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-faint);
+  margin-bottom: 4px;
+}
+
+.type-flow-code {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--color-muted);
+}
+
+.type-flow-arrow {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-magma);
+  animation: flow-pulse 1.5s ease-in-out infinite;
+}
+
+.type-flow-arrow:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+
+@keyframes flow-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(3px);
+  }
+}
+
+.type-flow-caption {
+  margin-top: 12px;
+  font-size: 11px;
+  color: var(--color-warn);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Legacy type-sync (keep for compatibility) */
+.type-sync {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.type-sync-box {
+  flex: 1;
+  padding: 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.type-sync-arrow {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-magma);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.type-sync-label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-faint);
+}
+
+/* === Card 3: Auth UI Mockup === */
+.auth-mockup {
+  padding: 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.auth-mockup-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.auth-mockup-field {
+  margin-bottom: 12px;
+}
+
+.auth-mockup-input {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: var(--color-faint);
+}
+
+.auth-mockup-btn {
+  width: 100%;
+  padding: 10px 16px;
+  background: var(--color-magma);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* === Card 4: Docker Build === */
+.docker-build {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.docker-whale {
+  width: 64px;
+  height: 64px;
+  color: #2496ed;
+}
+
+.docker-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.docker-size {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 16px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.docker-size--optimized {
+  border-color: var(--color-ok);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.docker-size-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-muted);
+}
+
+.docker-size--optimized .docker-size-value {
+  color: var(--color-ok);
+}
+
+.docker-size-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-faint);
+}
+
+.docker-arrow {
+  width: 24px;
+  height: 24px;
+  color: var(--color-ok);
+}
+
+.docker-caption {
+  font-size: 11px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* Legacy Lighthouse Gauge (keep for compatibility) */
+.lighthouse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lighthouse-gauge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.lighthouse-gauge svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.lighthouse-gauge-bg {
+  fill: none;
+  stroke: var(--color-panel);
+  stroke-width: 8;
+}
+
+.lighthouse-gauge-fill {
+  fill: none;
+  stroke: var(--color-ok);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.lighthouse-score {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-ok);
+}
+
+.lighthouse-label {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+/* === Internal Tier Diagram === */
+.tier-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tier-layer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast);
+}
+
+.tier-layer--internal {
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.tier-layer--pro {
+  border-color: var(--color-magma);
+  background: rgba(255, 107, 53, 0.05);
+}
+
+.tier-layer--standard {
+  border-color: var(--color-ok);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.tier-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.tier-layer--internal .tier-icon {
+  color: var(--color-danger);
+}
+
+.tier-layer--pro .tier-icon {
+  color: var(--color-magma);
+}
+
+.tier-layer--standard .tier-icon {
+  color: var(--color-ok);
+}
+
+.tier-info {
+  flex: 1;
+}
+
+.tier-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.tier-desc {
+  font-size: 10px;
+  color: var(--color-faint);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bento-title {
+    font-size: 2rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-card {
+    padding: 24px;
+  }
+
+  .bento-card:nth-child(2),
+  .bento-card:nth-child(4) {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .bento-card:nth-child(2) {
+    border-top: none;
+  }
+
+  .type-sync {
+    flex-direction: column;
+  }
+
+  .type-sync-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .bento-card {
+    opacity: 1;
+    transform: none;
+    transition: border-color var(--transition-default);
+  }
+
+  .type-sync-arrow {
+    animation: none;
+  }
+
+  .lighthouse-gauge-fill {
+    transition: none;
+    stroke-dashoffset: 0;
+  }
+}

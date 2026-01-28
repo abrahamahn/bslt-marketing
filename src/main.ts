@@ -1,9 +1,32 @@
 // src/main.ts
 import './styles/main.css';
 import './modules/navbar/navbar.css';
+import './modules/terminal/terminal.css';
+import './modules/command-palette/command-palette.css';
+import './modules/pricing/pricing.css';
+import './modules/code-tabs/code-tabs.css';
+import './modules/marquee/marquee.css';
+import './modules/bento/bento.css';
+import './modules/changelog/changelog.css';
+import './modules/social-proof/social-proof.css';
+import './modules/race-track/race-track.css';
+import './modules/integrations-grid/integrations-grid.css';
+import './modules/lightning-ide/lightning-ide.css';
+import './modules/open-source/open-source.css';
 
 import { initNavbar } from './modules/navbar/navbar.ts';
 import { initKeyboardShortcuts } from './modules/keyboard/keyboard.ts';
+import { initTerminal } from './modules/terminal/terminal.ts';
+import { initCommandPalette } from './modules/command-palette/command-palette.ts';
+import { initPricing } from './modules/pricing/pricing.ts';
+import { initCodeTabs } from './modules/code-tabs/code-tabs.ts';
+import { initMarquee } from './modules/marquee/marquee.ts';
+import { initBento } from './modules/bento/bento.ts';
+import { initChangelog } from './modules/changelog/changelog.ts';
+import { initSocialProof } from './modules/social-proof/social-proof.ts';
+import { initRaceTrack } from './modules/race-track/race-track.ts';
+import { initIntegrationsGrid } from './modules/integrations-grid/integrations-grid.ts';
+import { initLightningIDE } from './modules/lightning-ide/lightning-ide.ts';
 
 // Cleanup functions for hot module replacement
 const cleanupFns: (() => void)[] = [];
@@ -21,6 +44,20 @@ function init(): void {
   // Initialize modules
   cleanupFns.push(initNavbar());
   cleanupFns.push(initKeyboardShortcuts());
+  cleanupFns.push(initTerminal());
+  cleanupFns.push(initCommandPalette());
+  cleanupFns.push(initPricing());
+  cleanupFns.push(initCodeTabs());
+  cleanupFns.push(initMarquee());
+  cleanupFns.push(initBento());
+  cleanupFns.push(initChangelog());
+  cleanupFns.push(initSocialProof());
+  cleanupFns.push(initRaceTrack());
+  cleanupFns.push(initIntegrationsGrid());
+  cleanupFns.push(initLightningIDE());
+
+  // Reveal page after CSS loads (prevents FOUC)
+  document.body.classList.add('loaded');
 }
 
 /**

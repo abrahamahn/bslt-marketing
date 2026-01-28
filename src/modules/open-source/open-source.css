@@ -1,0 +1,29 @@
+/* src/modules/open-source/open-source.css */
+
+.open-source-cta {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.open-source-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 15px;
+}
+
+.open-source-cta .btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.open-source-note {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--color-faint);
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
