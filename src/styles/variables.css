@@ -1,0 +1,59 @@
+/* src/styles/variables.css */
+
+:root {
+  /* Colors - Basalt Dark Theme */
+  --color-bg: #0a0a0a;
+  --color-bg-alt: #121212;
+  --color-panel: #1a1a1a;
+  --color-panel-alt: #141414;
+  --color-text: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-faint: #71717a;
+
+  /* Brand Colors - Magma Gradient */
+  --color-magma: #ff6b35;
+  --color-magma-deep: #dc2626;
+  --color-magma-glow: #ff8c5a;
+
+  /* Accent Colors */
+  --color-brand: #ff6b35;
+  --color-brand-alt: #ff8c5a;
+
+  /* Semantic Colors */
+  --color-ok: #22c55e;
+  --color-warn: #eab308;
+  --color-danger: #ef4444;
+
+  /* Borders & Shadows */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15);
+  --shadow-default: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(255, 107, 53, 0.15);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --max-width: 1120px;
+  --header-height: 64px;
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-fast: 0.1s ease;
+  --transition-default: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Z-index layers */
+  --z-header: 100;
+  --z-modal: 200;
+  --z-tooltip: 300;
+}

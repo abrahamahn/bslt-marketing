@@ -1,0 +1,45 @@
+/* src/styles/typography.css */
+
+/* Fluid Typography Scale using clamp() */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  line-height: 1.35;
+  letter-spacing: 0.1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.125rem, 4.4vw, 3.375rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
