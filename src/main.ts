@@ -14,6 +14,7 @@ import './modules/integrations-grid/integrations-grid.css';
 import './modules/lightning-ide/lightning-ide.css';
 import './modules/open-source/open-source.css';
 import './modules/quality/quality.css';
+import './modules/ownership/ownership.css';
 
 import { initNavbar } from './modules/navbar/navbar.ts';
 import { initKeyboardShortcuts } from './modules/keyboard/keyboard.ts';

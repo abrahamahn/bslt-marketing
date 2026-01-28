@@ -338,55 +338,113 @@
         </div>
       </section>
 
-      <!-- COMPARE -->
-      <section id="compare">
+      <!-- OWNERSHIP -->
+      <section id="compare" class="ownership-section">
         <div class="wrap">
-          <h2 class="section-title section-title--left">Infrastructure vs. Chaos</h2>
+          <h2 class="section-title section-title--left">Don't Rent Your Foundation.<br><span class="hl2">Own It.</span></h2>
           <p class="section-lead section-lead--left">
-            The real cost isn't the price tag—it's the months of infrastructure work you skip.
+            Managed services feel like speed until they become a tax.
+            Real tech companies like Notion and Spotify don't rely on black-box dependencies—they build <strong>internal libraries</strong>.
+            BLST gives you that architecture on Day 1.
           </p>
 
-          <div class="compare">
-            <div class="compare-col">
-              <div class="badge green">
-                <span class="chip"></span>
-                BLST Engine
+          <div class="compare-grid">
+            <!-- The SaaS Trap -->
+            <div class="compare-card compare-card--danger">
+              <div class="compare-header">
+                <div class="compare-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <h3>The SaaS Trap</h3>
+                <span class="compare-sub">"The Wrapper"</span>
               </div>
-              <ul>
-                <li><strong>Hexagonal</strong> Backend Architecture</li>
-                <li><strong>Native</strong> Desktop App Included</li>
-                <li><strong>0ms</strong> Cold Start (Docker)</li>
-                <li><strong>Optimistic</strong> Client SDK</li>
-                <li>Full source code ownership</li>
-              </ul>
+              <div class="compare-body">
+                <p class="compare-pain">
+                  Great for prototypes, fatal for scale. You trade velocity today for a <strong>20% "Convenience Tax"</strong> forever.
+                </p>
+                <ul class="compare-list">
+                  <li class="negative">Vendor Lock-in (Auth0, Firebase)</li>
+                  <li class="negative">Unpredictable pricing spikes</li>
+                  <li class="negative">Data exists in black boxes</li>
+                  <li class="negative">Impossible to migrate later</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="compare-col">
-              <div class="badge alt">
-                <span class="chip"></span>
-                Managed Services
+            <!-- The DIY Slog -->
+            <div class="compare-card compare-card--warning">
+              <div class="compare-header">
+                <div class="compare-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <h3>The DIY Slog</h3>
+                <span class="compare-sub">"Refactoring Hell"</span>
               </div>
-              <ul>
-                <li>$20-150/mo recurring costs</li>
-                <li>Vendor lock-in risk</li>
-                <li>Black-box dependencies</li>
-                <li>Web-only (No Desktop)</li>
-                <li>Serverless cold starts</li>
-              </ul>
+              <div class="compare-body">
+                <p class="compare-pain">
+                  You build the MVP, then spend 4 months refactoring because you skipped the infra.
+                </p>
+                <ul class="compare-list">
+                  <li class="negative">2-6 months to MVP</li>
+                  <li class="negative">Spaghetti code architecture</li>
+                  <li class="negative">Zero documentation</li>
+                  <li class="negative">"We'll fix the tests later"</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="compare-col">
-              <div class="badge alt2">
-                <span class="chip"></span>
-                Standard Boilerplates
+            <!-- The BLST Standard -->
+            <div class="compare-card compare-card--success">
+              <div class="compare-header">
+                <div class="compare-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                    <polyline points="2 17 12 22 22 17" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <polyline points="2 12 12 17 22 12" fill="none" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </div>
+                <h3>The BLST Standard</h3>
+                <span class="compare-sub">"Sovereign Architecture"</span>
               </div>
-              <ul>
-                <li>Tightly coupled API logic</li>
-                <li>Web-only (No Desktop)</li>
-                <li>Basic fetch() calls</li>
-                <li>"Spaghetti" folder structure</li>
-                <li>No offline support</li>
-              </ul>
+              <div class="compare-body">
+                <p class="compare-pain">
+                  The infrastructure of a Series B startup. No external dependencies. <strong>You own the metal.</strong>
+                </p>
+                <ul class="compare-list">
+                  <li class="positive">Internal Package Architecture</li>
+                  <li class="positive">Zero-Dependency Core</li>
+                  <li class="positive">100% Code Sovereignty</li>
+                  <li class="positive">Golden Standard Patterns</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quality Bar -->
+          <div class="quality-bar">
+            <div class="quality-bar-item">
+              <span class="quality-number">1:1</span>
+              <span class="quality-label">Test Parity</span>
+              <span class="quality-meta">Every source file has a matching test file.</span>
+            </div>
+            <div class="quality-divider"></div>
+            <div class="quality-bar-item">
+              <span class="quality-number">100%</span>
+              <span class="quality-label">JSDoc Coverage</span>
+              <span class="quality-meta">Rich IDE hover-docs for every function.</span>
+            </div>
+            <div class="quality-divider"></div>
+            <div class="quality-bar-item">
+              <span class="quality-number">Zero</span>
+              <span class="quality-label">Magic</span>
+              <span class="quality-meta">No hidden abstractions. Pure TypeScript.</span>
             </div>
           </div>
         </div>
