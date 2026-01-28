@@ -22,8 +22,7 @@
 /* Bento Grid Container */
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   width: 100%;
   align-items: stretch;
@@ -49,14 +48,17 @@
     background var(--transition-default);
 }
 
-/* Remove duplicate borders */
+/* Remove duplicate borders for 3-column grid */
 .bento-card:nth-child(2),
-.bento-card:nth-child(4) {
+.bento-card:nth-child(3),
+.bento-card:nth-child(5),
+.bento-card:nth-child(6) {
   border-left: none;
 }
 
-.bento-card:nth-child(3),
-.bento-card:nth-child(4) {
+.bento-card:nth-child(4),
+.bento-card:nth-child(5),
+.bento-card:nth-child(6) {
   border-top: none;
 }
 
@@ -491,7 +493,51 @@
   color: var(--color-faint);
 }
 
-/* Responsive */
+/* === Terminal List (for tooling card) === */
+.terminal-list {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+}
+
+.term-line {
+  padding: 6px 0;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.term-line:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.term-green {
+  color: var(--color-ok);
+  font-weight: 700;
+}
+
+/* Responsive - Tablet (2 columns) */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset borders for 2-column tablet layout */
+  .bento-card:nth-child(3) {
+    border-left: 1px solid var(--color-border);
+    border-top: none;
+  }
+
+  .bento-card:nth-child(5) {
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+/* Responsive - Mobile (1 column) */
 @media (max-width: 768px) {
   .bento-title {
     font-size: 2rem;
@@ -520,12 +566,13 @@
     text-align: left;
   }
 
+  /* Reset borders for single-column mobile layout */
   .bento-card:nth-child(2),
-  .bento-card:nth-child(4) {
+  .bento-card:nth-child(3),
+  .bento-card:nth-child(4),
+  .bento-card:nth-child(5),
+  .bento-card:nth-child(6) {
     border-left: 1px solid var(--color-border);
-  }
-
-  .bento-card:nth-child(2) {
     border-top: none;
   }
 
