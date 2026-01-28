@@ -790,6 +790,84 @@
         </div>
       </section>
 
+      <!-- SOVEREIGNTY -->
+      <section id="sovereignty" class="sovereignty-section">
+        <div class="wrap">
+          <h2 class="section-title">Zero Black Boxes.<br><span class="hl2">100% Code Sovereignty.</span></h2>
+          <p class="section-lead">
+            We replaced heavy, bloated dependencies with optimized internal libraries.
+            You own every line of code that runs your business.
+          </p>
+
+          <div class="specs-grid">
+            <div class="spec-card">
+              <div class="spec-header">
+                <div class="spec-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M16 12l-4-4-4 4M12 16V8"/>
+                  </svg>
+                </div>
+                <h3>The 1kb Router</h3>
+              </div>
+              <p>
+                We ripped out <code>react-router-dom</code>.
+                BLST uses a custom 150-line type-safe router in <code>packages/ui/router</code>.
+                Faster, simpler, and fully yours.
+              </p>
+            </div>
+
+            <div class="spec-card">
+              <div class="spec-header">
+                <div class="spec-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                  </svg>
+                </div>
+                <h3>Native Postgres Queue</h3>
+              </div>
+              <p>
+                No Redis required. We implemented a transactional job queue directly in Postgres (<code>infrastructure/jobs</code>).
+                Zero infrastructure overhead for background tasks.
+              </p>
+            </div>
+
+            <div class="spec-card">
+              <div class="spec-header">
+                <div class="spec-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </div>
+                <h3>Sovereign Identity</h3>
+              </div>
+              <p>
+                No Auth0 tax. No Clerk lock-in.
+                A complete JWT implementation with <strong>Rotation</strong>, <strong>Reuse Detection</strong>, and <strong>Family Tracking</strong> built natively in <code>infrastructure/crypto</code>.
+              </p>
+            </div>
+
+            <div class="spec-card">
+              <div class="spec-header">
+                <div class="spec-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                  </svg>
+                </div>
+                <h3>Headless UI System</h3>
+              </div>
+              <p>
+                23+ Custom Hooks like <code>useVirtualScroll</code> and <code>useOptimizedMemo</code>.
+                A complete component library using CSS Variables for zero-runtime overhead.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ENGINEERING QUALITY -->
       <section class="quality-section">
         <div class="wrap">
@@ -1060,6 +1138,85 @@
   }
 }</code></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLING -->
+      <section class="tooling-section">
+        <div class="wrap">
+          <div class="feature-split">
+            <div class="feature-text">
+              <h2 class="section-title section-title--left">The Repo that<br>Maintains Itself.</h2>
+              <p class="section-lead section-lead--left">
+                Spaghetti code happens when configuration drifts. BLST includes a dedicated <code>tooling/</code> suite to keep your architecture strict automatically.
+              </p>
+              <ul class="tooling-list">
+                <li>
+                  <strong>Auto-Sync Aliases:</strong>
+                  <code>sync-aliases.ts</code> automatically updates your <code>tsconfig.json</code> when you add new packages.
+                </li>
+                <li>
+                  <strong>Bundle Monitor:</strong>
+                  <code>audit/bundle-size.ts</code> fails CI if your frontend bundle exceeds 150kb.
+                </li>
+                <li>
+                  <strong>Security Audit:</strong>
+                  Automated dependency scanning in the pre-push hook.
+                </li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="terminal-window">
+                <div class="term-header">
+                  <span class="term-dot term-dot--red"></span>
+                  <span class="term-dot term-dot--yellow"></span>
+                  <span class="term-dot term-dot--green"></span>
+                </div>
+                <div class="term-body">
+                  <div class="term-row">
+                    <span class="term-prompt">$</span> pnpm run audit:all
+                  </div>
+                  <div class="term-row term-row--success">
+                    <span class="term-green">&#10004;</span> Syncing TS Config Paths... Done (4ms)
+                  </div>
+                  <div class="term-row term-row--success">
+                    <span class="term-green">&#10004;</span> Checking Bundle Size... 84kb (Pass)
+                  </div>
+                  <div class="term-row term-row--success">
+                    <span class="term-green">&#10004;</span> Security Audit... 0 Vulnerabilities
+                  </div>
+                  <div class="term-row">
+                    <span class="term-blue">Ready to deploy.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPECS LIST -->
+      <section class="specs-list-section">
+        <div class="wrap">
+          <h3 class="specs-title">The "Day 1" Spec Sheet</h3>
+          <p class="specs-sub">Most boilerplates skip these. We didn't.</p>
+
+          <div class="specs-columns">
+            <ul class="check-list">
+              <li><strong>Graceful Shutdown:</strong> No dropped requests during deploys.</li>
+              <li><strong>Correlation IDs:</strong> Trace requests across the stack (<code>middleware/correlationId</code>).</li>
+              <li><strong>Health Checks:</strong> Kubernetes-ready <code>/health</code> endpoints.</li>
+              <li><strong>Security Headers:</strong> Strict CSP with Nonce-based execution.</li>
+              <li><strong>Rate Limiting:</strong> Token bucket algorithm (<code>security/rate-limit</code>).</li>
+            </ul>
+            <ul class="check-list">
+              <li><strong>Audit Logging:</strong> Record security events to DB (<code>security/audit</code>).</li>
+              <li><strong>Media Processing:</strong> Server-side FFmpeg & Image Optimization.</li>
+              <li><strong>Type-Safe IPC:</strong> Secured Electron bridge (<code>electron/ipc</code>).</li>
+              <li><strong>Optimistic Locking:</strong> Database conflict prevention (<code>utils/optimistic-lock</code>).</li>
+              <li><strong>Automated Audits:</strong> Scripts for Bundle Size & Security (<code>tooling/audit</code>).</li>
+            </ul>
           </div>
         </div>
       </section>

@@ -15,6 +15,9 @@ import './modules/lightning-ide/lightning-ide.css';
 import './modules/open-source/open-source.css';
 import './modules/quality/quality.css';
 import './modules/ownership/ownership.css';
+import './modules/sovereignty/sovereignty.css';
+import './modules/tooling/tooling.css';
+import './modules/specs-list/specs-list.css';
 
 import { initNavbar } from './modules/navbar/navbar.ts';
 import { initKeyboardShortcuts } from './modules/keyboard/keyboard.ts';

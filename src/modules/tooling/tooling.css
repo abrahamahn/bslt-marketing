@@ -1,0 +1,162 @@
+/* src/modules/tooling/tooling.css */
+
+/* Tooling Section */
+.tooling-section {
+  padding: 96px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Feature Split Layout */
+.feature-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.feature-text {
+  max-width: 500px;
+}
+
+/* Tooling List */
+.tooling-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+}
+
+.tooling-list li {
+  margin-bottom: 20px;
+  padding-left: 24px;
+  position: relative;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.tooling-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-magma);
+  border-radius: 2px;
+}
+
+.tooling-list strong {
+  color: var(--color-text);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tooling-list code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-magma);
+  background: rgba(255, 107, 53, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Terminal Window */
+.terminal-window {
+  background: var(--color-panel);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.term-header {
+  background: var(--color-panel-alt);
+  padding: 14px 16px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.term-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-faint);
+}
+
+.term-dot--red {
+  background: #ff5f56;
+}
+
+.term-dot--yellow {
+  background: #ffbd2e;
+}
+
+.term-dot--green {
+  background: #27c93f;
+}
+
+.term-body {
+  padding: 24px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.term-row {
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.term-row:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.term-prompt {
+  color: var(--color-faint);
+}
+
+.term-row--success {
+  color: var(--color-ok);
+}
+
+.term-green {
+  color: var(--color-ok);
+  font-weight: 700;
+}
+
+.term-blue {
+  color: #3b82f6;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .feature-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .feature-text {
+    max-width: none;
+    order: 1;
+  }
+
+  .feature-visual {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .tooling-section {
+    padding: 64px 0;
+  }
+
+  .term-body {
+    padding: 16px;
+    font-size: 12px;
+  }
+}

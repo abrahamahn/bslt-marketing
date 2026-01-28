@@ -1,0 +1,92 @@
+/* src/modules/specs-list/specs-list.css */
+
+/* Specs List Section */
+.specs-list-section {
+  background: var(--color-bg);
+  padding: 72px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.specs-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+.specs-sub {
+  text-align: center;
+  color: var(--color-faint);
+  font-size: 15px;
+  margin: 0 0 48px;
+}
+
+/* Specs Columns */
+.specs-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Check List */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  margin-bottom: 16px;
+  padding-left: 28px;
+  position: relative;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-magma);
+  border-radius: 50%;
+}
+
+.check-list li:last-child {
+  margin-bottom: 0;
+}
+
+.check-list strong {
+  color: var(--color-text);
+}
+
+.check-list code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-magma);
+  background: rgba(255, 107, 53, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .specs-list-section {
+    padding: 48px 0;
+  }
+
+  .specs-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .specs-title {
+    font-size: 20px;
+  }
+}
