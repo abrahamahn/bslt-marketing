@@ -5,6 +5,11 @@
   padding: 32px 0;
 }
 
+.marquee-section .wrap {
+  border-left: none;
+  border-right: none;
+}
+
 /* Marquee Header */
 .marquee-header {
   text-align: center;

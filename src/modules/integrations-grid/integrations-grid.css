@@ -5,6 +5,10 @@
   padding: 48px 0;
 }
 
+.integrations-section .wrap {
+  padding: 0 20px;
+}
+
 /* Grid Container */
 .integrations-grid {
   display: grid;
@@ -81,6 +85,7 @@
   min-height: 24px;
   font-size: 14px;
   color: var(--color-faint);
+  text-align: center;
   transition: color var(--transition-fast);
 }
 
