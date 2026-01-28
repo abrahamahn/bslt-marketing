@@ -123,7 +123,7 @@
 }
 
 .race-status-text.race-status--done {
-  color: var(--color-success);
+  color: var(--color-ok);
 }
 
 .race-status-text.race-status--error {
@@ -134,7 +134,7 @@
   font-size: 12px;
   font-weight: 700;
   font-family: var(--font-mono);
-  color: var(--color-success);
+  color: var(--color-ok);
   opacity: 0;
   transform: translateX(-8px);
   transition:
@@ -172,7 +172,17 @@
 
 .race-lane--blst .race-progress-fill {
   background: linear-gradient(90deg, var(--color-magma), var(--color-magma-deep));
-  box-shadow: 0 0 16px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+  animation: progress-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes progress-glow {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(255, 107, 53, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(255, 107, 53, 0.6);
+  }
 }
 
 /* Responsive */
@@ -192,6 +202,10 @@
 @media (prefers-reduced-motion: reduce) {
   .race-progress-fill {
     transition: none;
+  }
+
+  .race-lane--blst .race-progress-fill {
+    animation: none;
   }
 
   .race-time {

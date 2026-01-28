@@ -66,7 +66,7 @@
   flex-shrink: 0;
   width: 80px;
   height: 48px;
-  cursor: default;
+  cursor: pointer;
 }
 
 .marquee-item:focus {
@@ -83,14 +83,16 @@
   filter: grayscale(100%) brightness(0.7);
   opacity: 0.6;
   transition:
-    filter var(--transition-default),
-    opacity var(--transition-default);
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .marquee-item:hover .marquee-logo,
 .marquee-item:focus .marquee-logo {
   filter: grayscale(0%) brightness(1);
   opacity: 1;
+  transform: scale(1.1);
 }
 
 /* SVG Logo Inline */
@@ -99,12 +101,15 @@
   height: 100%;
   fill: currentColor;
   color: var(--color-faint);
-  transition: color var(--transition-default);
+  transition:
+    color 0.3s ease,
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .marquee-item:hover .marquee-logo-svg,
 .marquee-item:focus .marquee-logo-svg {
   color: var(--color-text);
+  transform: scale(1.1);
 }
 
 /* Tooltip */

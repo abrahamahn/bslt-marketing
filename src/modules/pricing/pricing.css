@@ -26,15 +26,15 @@
   cursor: pointer;
   transition:
     border-color var(--transition-default),
-    transform var(--transition-default),
-    box-shadow var(--transition-default);
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
 }
 
 .price-card:hover {
   border-color: var(--color-border-hover);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 20px 50px rgba(0, 0, 0, 0.45),
     0 0 1px rgba(255, 255, 255, 0.1);
 }
 
@@ -57,10 +57,10 @@
 
 .price-card.featured:hover {
   border-color: rgba(255, 107, 53, 0.6);
-  transform: scale(1.02) translateY(-4px);
+  transform: scale(1.02) translateY(-6px);
   box-shadow:
-    0 16px 60px rgba(0, 0, 0, 0.5),
-    0 0 80px rgba(255, 107, 53, 0.15);
+    0 24px 70px rgba(0, 0, 0, 0.5),
+    0 0 100px rgba(255, 107, 53, 0.2);
 }
 
 .price-card-highlight {
@@ -162,6 +162,7 @@
 
 /* CTA Button */
 .price-cta {
+  position: relative;
   display: block;
   width: 100%;
   padding: 16px 24px;
@@ -174,18 +175,32 @@
   border-radius: var(--radius-md);
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   transition:
     background var(--transition-default),
     border-color var(--transition-default),
-    transform var(--transition-fast),
-    box-shadow var(--transition-default);
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease;
+}
+
+.price-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-default);
 }
 
 .price-cta:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   border-color: var(--color-border-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.price-cta:hover::before {
+  opacity: 1;
 }
 
 .price-card.featured .price-cta {

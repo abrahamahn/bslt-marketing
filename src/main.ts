@@ -27,6 +27,7 @@ import { initSocialProof } from './modules/social-proof/social-proof.ts';
 import { initRaceTrack } from './modules/race-track/race-track.ts';
 import { initIntegrationsGrid } from './modules/integrations-grid/integrations-grid.ts';
 import { initLightningIDE } from './modules/lightning-ide/lightning-ide.ts';
+import { initScrollAnimate } from './modules/scroll-animate/scroll-animate.ts';
 
 // Cleanup functions for hot module replacement
 const cleanupFns: (() => void)[] = [];
@@ -55,6 +56,7 @@ function init(): void {
   cleanupFns.push(initRaceTrack());
   cleanupFns.push(initIntegrationsGrid());
   cleanupFns.push(initLightningIDE());
+  cleanupFns.push(initScrollAnimate());
 
   // Reveal page after CSS loads (prevents FOUC)
   document.body.classList.add('loaded');
