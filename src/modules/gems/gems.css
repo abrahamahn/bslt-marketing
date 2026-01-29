@@ -161,10 +161,71 @@
   margin-bottom: 24px;
   display: flex;
   gap: 16px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chat-msg--hidden {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 .chat-msg:last-child {
   margin-bottom: 0;
+}
+
+/* Typewriter effect for user input */
+.typewriter {
+  display: inline;
+  border-right: 2px solid var(--color-text);
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.typewriter--done {
+  border-right-color: transparent;
+  animation: none;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--color-text); }
+}
+
+/* Streaming text effect for AI response */
+.stream-text,
+.stream-line {
+  opacity: 0;
+}
+
+.stream-text--visible,
+.stream-line--visible {
+  opacity: 1;
+}
+
+.stream-char {
+  opacity: 0;
+  animation: fade-in-char 0.02s ease forwards;
+}
+
+@keyframes fade-in-char {
+  to { opacity: 1; }
+}
+
+/* Streaming cursor */
+.stream-cursor {
+  display: inline-block;
+  width: 6px;
+  height: 14px;
+  background: var(--color-magma);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: pulse-cursor 0.6s ease-in-out infinite;
+}
+
+@keyframes pulse-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 .chat-msg .avatar {
@@ -244,10 +305,9 @@
 
 .admin-card {
   background: rgba(255, 255, 255, 0.02);
-  padding: 32px;
   border-radius: var(--radius-lg);
-  text-align: center;
   border: 1px solid var(--color-border);
+  overflow: hidden;
   transition:
     transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
     background var(--transition-default),
@@ -260,29 +320,48 @@
   border-color: var(--color-border-hover);
 }
 
-.admin-icon {
-  font-size: 40px;
-  margin-bottom: 16px;
+.admin-visual {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.admin-dashboard-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.admin-dashboard-svg text {
+  font-family: var(--font-mono);
+}
+
+.admin-content {
+  padding: 24px;
 }
 
 .admin-card h3 {
   color: var(--color-text);
-  margin: 0 0 12px;
-  font-size: 20px;
+  margin: 0 0 8px;
+  font-size: 18px;
   font-weight: 700;
 }
 
 .admin-card p {
   color: var(--color-muted);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 12px;
 }
 
 .admin-card code {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--color-faint);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* Responsive */

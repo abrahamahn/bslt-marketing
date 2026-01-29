@@ -16,7 +16,7 @@ const CHANGELOG: ChangelogEntry[] = [
     version: '1.0.0',
     date: '2026-01-15',
     changes: [
-      'Initial release of Basalt boilerplate',
+      'Initial release of BSLT Engine',
       'Full monorepo setup with Turborepo',
       'React + Vite frontend with TanStack Query',
       'Fastify API with session-based auth',

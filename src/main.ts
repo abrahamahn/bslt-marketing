@@ -37,6 +37,7 @@ import { initRaceTrack } from './modules/race-track/race-track.ts';
 import { initIntegrationsGrid } from './modules/integrations-grid/integrations-grid.ts';
 import { initLightningIDE } from './modules/lightning-ide/lightning-ide.ts';
 import { initScrollAnimate } from './modules/scroll-animate/scroll-animate.ts';
+import { initChatAnimation } from './modules/chat-animation/chat-animation.ts';
 
 // Cleanup functions for hot module replacement
 const cleanupFns: (() => void)[] = [];
@@ -66,6 +67,7 @@ function init(): void {
   cleanupFns.push(initIntegrationsGrid());
   cleanupFns.push(initLightningIDE());
   cleanupFns.push(initScrollAnimate());
+  cleanupFns.push(initChatAnimation());
 
   // Reveal page after CSS loads (prevents FOUC)
   document.body.classList.add('loaded');

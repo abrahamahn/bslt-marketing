@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Production-ready TypeScript SaaS boilerplate with Hexagonal architecture. React, Fastify, Electron desktop, and 14 pre-built modules. Own your stack, ship faster."
+      content="Production-ready TypeScript SaaS engine with Hexagonal architecture. React, Fastify, Electron desktop, and 14 pre-built modules. Own your stack, ship faster."
     />
     <meta name="keywords" content="typescript boilerplate, saas starter kit, react boilerplate, electron starter, fastify template, hexagonal architecture, monorepo starter, fullstack typescript, saas template, node.js boilerplate" />
     <meta name="author" content="BSLT" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0a0a0a" />
-    <title>BSLT - TypeScript SaaS Boilerplate | React, Fastify, Electron Starter Kit</title>
+    <title>BSLT - TypeScript SaaS Engine | React, Fastify, Electron Starter Kit</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
     <link rel="canonical" href="https://bslt.dev/" />
@@ -45,7 +45,7 @@
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bslt_dev" />
-    <meta name="twitter:title" content="BSLT - TypeScript SaaS Boilerplate" />
+    <meta name="twitter:title" content="BSLT - TypeScript SaaS Engine" />
     <meta
       name="twitter:description"
       content="14 production modules. React + Fastify + Electron. No vendor lock-in. Ship your SaaS in days, not months."
@@ -59,7 +59,7 @@
         "@type": "SoftwareApplication",
         "name": "BSLT",
         "alternateName": "BSLT SaaS Engine",
-        "description": "Production-ready TypeScript SaaS boilerplate with Hexagonal architecture. Includes React frontend, Fastify backend, Electron desktop app, and 14 pre-built modules.",
+        "description": "Production-ready TypeScript SaaS engine with Hexagonal architecture. Includes React frontend, Fastify backend, Electron desktop app, and 14 pre-built modules.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows, macOS, Linux",
         "programmingLanguage": "TypeScript",
@@ -780,22 +780,223 @@
           </div>
 
           <div class="admin-grid">
+            <!-- Security Audit Card -->
             <div class="admin-card">
-              <div class="admin-icon">🚨</div>
-              <h3>Security Audit</h3>
-              <p>View failed login attempts, potential attacks, and banned IPs in real-time. <code>SecurityEventsPage.tsx</code></p>
+              <div class="admin-visual">
+                <svg class="admin-dashboard-svg" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+                  <!-- Background grid -->
+                  <defs>
+                    <pattern id="grid-security" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="200" height="120" fill="url(#grid-security)"/>
+
+                  <!-- Threat level bars with animations -->
+                  <rect x="20" y="85" width="24" height="25" rx="2" fill="rgba(255,107,53,0.2)"/>
+                  <rect x="20" y="95" width="24" height="15" rx="2" fill="var(--color-magma)">
+                    <animate attributeName="height" values="15;18;15" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="y" values="95;92;95" dur="2s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <rect x="52" y="70" width="24" height="40" rx="2" fill="rgba(255,107,53,0.2)"/>
+                  <rect x="52" y="90" width="24" height="20" rx="2" fill="var(--color-magma)">
+                    <animate attributeName="height" values="20;25;20" dur="2.5s" repeatCount="indefinite"/>
+                    <animate attributeName="y" values="90;85;90" dur="2.5s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <rect x="84" y="55" width="24" height="55" rx="2" fill="rgba(255,107,53,0.2)"/>
+                  <rect x="84" y="80" width="24" height="30" rx="2" fill="#ef4444">
+                    <animate attributeName="height" values="30;38;30" dur="1.8s" repeatCount="indefinite"/>
+                    <animate attributeName="y" values="80;72;80" dur="1.8s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="1;0.7;1" dur="1.8s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <rect x="116" y="75" width="24" height="35" rx="2" fill="rgba(255,107,53,0.2)"/>
+                  <rect x="116" y="92" width="24" height="18" rx="2" fill="var(--color-magma)">
+                    <animate attributeName="height" values="18;22;18" dur="2.2s" repeatCount="indefinite"/>
+                    <animate attributeName="y" values="92;88;92" dur="2.2s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <rect x="148" y="88" width="24" height="22" rx="2" fill="rgba(255,107,53,0.2)"/>
+                  <rect x="148" y="98" width="24" height="12" rx="2" fill="#22c55e">
+                    <animate attributeName="height" values="12;15;12" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="y" values="98;95;98" dur="3s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <!-- Alert badge with pulse -->
+                  <circle cx="96" cy="35" r="16" fill="#ef4444" opacity="0.3">
+                    <animate attributeName="r" values="12;18;12" dur="1.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0.4;0;0.4" dur="1.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <circle cx="96" cy="35" r="12" fill="#ef4444"/>
+                  <text x="96" y="39" text-anchor="middle" fill="white" font-size="10" font-weight="700">3</text>
+
+                  <!-- Scanning line -->
+                  <line x1="15" y1="60" x2="185" y2="60" stroke="var(--color-magma)" stroke-width="1" opacity="0.5">
+                    <animate attributeName="y1" values="110;50;110" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="y2" values="110;50;110" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;0.6;0" dur="3s" repeatCount="indefinite"/>
+                  </line>
+
+                  <!-- Status indicator -->
+                  <rect x="20" y="15" width="60" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                  <rect x="20" y="15" width="45" height="6" rx="3" fill="#22c55e"/>
+                  <text x="85" y="20" fill="rgba(255,255,255,0.5)" font-size="8">94% Safe</text>
+                </svg>
+              </div>
+              <div class="admin-content">
+                <h3>Security Audit</h3>
+                <p>View failed login attempts, potential attacks, and banned IPs in real-time.</p>
+                <code>SecurityEventsPage.tsx</code>
+              </div>
             </div>
 
+            <!-- Job Monitor Card -->
             <div class="admin-card">
-              <div class="admin-icon">🔄</div>
-              <h3>Job Monitor</h3>
-              <p>See your Postgres Job Queue health. Retry failed emails or processing tasks with one click. <code>JobMonitorPage.tsx</code></p>
+              <div class="admin-visual">
+                <svg class="admin-dashboard-svg" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+                  <!-- Background grid -->
+                  <rect width="200" height="120" fill="url(#grid-security)"/>
+
+                  <!-- Job queue items -->
+                  <g class="job-item">
+                    <rect x="15" y="15" width="170" height="24" rx="4" fill="rgba(255,255,255,0.05)"/>
+                    <circle cx="30" cy="27" r="5" fill="#22c55e"/>
+                    <rect x="45" y="24" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="45" y="24" width="100" height="6" rx="3" fill="#22c55e"/>
+                    <text x="175" y="30" text-anchor="end" fill="#22c55e" font-size="8">Done</text>
+                  </g>
+
+                  <g class="job-item">
+                    <rect x="15" y="45" width="170" height="24" rx="4" fill="rgba(255,255,255,0.05)"/>
+                    <!-- Spinning loader -->
+                    <g transform="translate(30, 57)">
+                      <circle cx="0" cy="0" r="5" fill="none" stroke="rgba(255,107,53,0.3)" stroke-width="2"/>
+                      <path d="M 0 -5 A 5 5 0 0 1 5 0" fill="none" stroke="var(--color-magma)" stroke-width="2" stroke-linecap="round">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="1s" repeatCount="indefinite"/>
+                      </path>
+                    </g>
+                    <rect x="45" y="54" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="45" y="54" width="25" height="6" rx="3" fill="var(--color-magma)">
+                      <animate attributeName="width" values="25;65;25" dur="3s" repeatCount="indefinite"/>
+                    </rect>
+                    <text x="175" y="60" text-anchor="end" fill="var(--color-magma)" font-size="8">
+                      <animate attributeName="textContent" values="25%;45%;65%;45%;25%" dur="3s" repeatCount="indefinite"/>
+                      <tspan>
+                        <animate attributeName="opacity" values="1;1;1" dur="0.5s" repeatCount="indefinite"/>
+                      </tspan>
+                    </text>
+                    <!-- Fallback animated percentage using multiple text elements -->
+                    <text x="175" y="60" text-anchor="end" fill="var(--color-magma)" font-size="8" opacity="0">
+                      25%<animate attributeName="opacity" values="1;0;0;0;1" dur="3s" repeatCount="indefinite"/>
+                    </text>
+                    <text x="175" y="60" text-anchor="end" fill="var(--color-magma)" font-size="8" opacity="0">
+                      45%<animate attributeName="opacity" values="0;1;0;1;0" dur="3s" repeatCount="indefinite"/>
+                    </text>
+                    <text x="175" y="60" text-anchor="end" fill="var(--color-magma)" font-size="8" opacity="0">
+                      65%<animate attributeName="opacity" values="0;0;1;0;0" dur="3s" repeatCount="indefinite"/>
+                    </text>
+                  </g>
+
+                  <g class="job-item">
+                    <rect x="15" y="75" width="170" height="24" rx="4" fill="rgba(239,68,68,0.05)"/>
+                    <!-- Pulsing error indicator -->
+                    <circle cx="30" cy="87" r="5" fill="#ef4444">
+                      <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite"/>
+                    </circle>
+                    <rect x="45" y="84" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="45" y="84" width="35" height="6" rx="3" fill="#ef4444"/>
+                    <rect x="152" y="82" width="32" height="12" rx="3" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1">
+                      <animate attributeName="stroke-opacity" values="1;0.4;1" dur="1.5s" repeatCount="indefinite"/>
+                    </rect>
+                    <text x="168" y="91" text-anchor="middle" fill="#ef4444" font-size="8">Retry</text>
+                  </g>
+
+                  <!-- Queue stats with live counter effect -->
+                  <text x="15" y="112" fill="rgba(255,255,255,0.4)" font-size="8">Queue: </text>
+                  <text x="45" y="112" fill="rgba(255,255,255,0.6)" font-size="8">
+                    <tspan>24</tspan>
+                  </text>
+                  <text x="57" y="112" fill="rgba(255,255,255,0.4)" font-size="8"> pending · </text>
+                  <text x="100" y="112" fill="#ef4444" font-size="8">3 failed</text>
+                </svg>
+              </div>
+              <div class="admin-content">
+                <h3>Job Monitor</h3>
+                <p>See your Postgres Job Queue health. Retry failed emails or processing tasks with one click.</p>
+                <code>JobMonitorPage.tsx</code>
+              </div>
             </div>
 
+            <!-- User Management Card -->
             <div class="admin-card">
-              <div class="admin-icon">👥</div>
-              <h3>User Management</h3>
-              <p>Impersonate users, manage subscriptions, and handle support without touching the database. <code>UserListPage.tsx</code></p>
+              <div class="admin-visual">
+                <svg class="admin-dashboard-svg" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+                  <!-- Background grid -->
+                  <rect width="200" height="120" fill="url(#grid-security)"/>
+
+                  <!-- Table header -->
+                  <rect x="10" y="10" width="180" height="18" rx="3" fill="rgba(255,255,255,0.08)"/>
+                  <text x="20" y="22" fill="rgba(255,255,255,0.5)" font-size="7" font-weight="600">USER</text>
+                  <text x="130" y="22" fill="rgba(255,255,255,0.5)" font-size="7" font-weight="600">STATUS</text>
+                  <text x="170" y="22" fill="rgba(255,255,255,0.5)" font-size="7" font-weight="600">ACTIONS</text>
+
+                  <!-- User rows -->
+                  <g class="user-row">
+                    <rect x="10" y="32" width="180" height="22" rx="2" fill="rgba(255,255,255,0.02)"/>
+                    <circle cx="22" cy="43" r="7" fill="rgba(255,107,53,0.3)"/>
+                    <text x="22" y="46" text-anchor="middle" fill="var(--color-magma)" font-size="7" font-weight="600">JD</text>
+                    <text x="35" y="46" fill="rgba(255,255,255,0.8)" font-size="8">john@acme.co</text>
+                    <!-- Online status with pulse -->
+                    <circle cx="135" cy="43" r="5" fill="#22c55e" opacity="0.3">
+                      <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+                      <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                    </circle>
+                    <circle cx="135" cy="43" r="3" fill="#22c55e"/>
+                    <text x="143" y="46" fill="#22c55e" font-size="7">Online</text>
+                    <text x="178" y="46" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10">···</text>
+                  </g>
+
+                  <g class="user-row">
+                    <rect x="10" y="58" width="180" height="22" rx="2" fill="rgba(255,255,255,0.02)"/>
+                    <circle cx="22" cy="69" r="7" fill="rgba(99,102,241,0.3)"/>
+                    <text x="22" y="72" text-anchor="middle" fill="#818cf8" font-size="7" font-weight="600">SM</text>
+                    <text x="35" y="72" fill="rgba(255,255,255,0.8)" font-size="8">sarah@startup.io</text>
+                    <!-- Away status with slow blink -->
+                    <circle cx="135" cy="69" r="3" fill="#eab308">
+                      <animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/>
+                    </circle>
+                    <text x="143" y="72" fill="#eab308" font-size="7">Away</text>
+                    <text x="178" y="72" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10">···</text>
+                  </g>
+
+                  <g class="user-row">
+                    <rect x="10" y="84" width="180" height="22" rx="2" fill="rgba(239,68,68,0.05)"/>
+                    <circle cx="22" cy="95" r="7" fill="rgba(239,68,68,0.3)"/>
+                    <text x="22" y="98" text-anchor="middle" fill="#ef4444" font-size="7" font-weight="600">MK</text>
+                    <text x="35" y="98" fill="rgba(255,255,255,0.5)" font-size="8">mike@spam.net</text>
+                    <!-- Banned status with alert pulse -->
+                    <rect x="125" y="91" width="40" height="10" rx="2" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1">
+                      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+                    </rect>
+                    <text x="145" y="99" text-anchor="middle" fill="#ef4444" font-size="7">Banned</text>
+                    <text x="178" y="98" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-size="10">···</text>
+                  </g>
+
+                  <!-- Live user count -->
+                  <text x="10" y="115" fill="rgba(255,255,255,0.4)" font-size="7">Showing 3 of 1,247 users</text>
+                  <circle cx="180" cy="112" r="3" fill="#22c55e">
+                    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+                  </circle>
+                  <text x="172" y="115" text-anchor="end" fill="rgba(255,255,255,0.4)" font-size="7">12 online</text>
+                </svg>
+              </div>
+              <div class="admin-content">
+                <h3>User Management</h3>
+                <p>Impersonate users, manage subscriptions, and handle support without touching the database.</p>
+                <code>UserListPage.tsx</code>
+              </div>
             </div>
           </div>
         </div>
@@ -854,11 +1055,11 @@
                 </div>
               </div>
               <div class="team-content">
-                <h3>The "Robot CTO"</h3>
+                <h3>Automated Governance</h3>
                 <p>
-                  You can't review every PR. BSLT's <code>tooling/</code> scripts act as an automated architect.
-                  It enforces strict boundaries (e.g., "UI cannot import Database code") at the compiler level.
-                  Junior devs <em>cannot</em> break the architecture.
+                  You can't review every PR. BSLT's <code>tooling/</code> scripts enforce architectural boundaries automatically.
+                  Strict rules like "UI cannot import Database code" are checked at compile time.
+                  The architecture protects itself.
                 </p>
               </div>
             </div>
@@ -1027,7 +1228,7 @@
       <section class="specs-list-section">
         <div class="wrap">
           <h3 class="specs-title">The "Day 1" Spec Sheet</h3>
-          <p class="specs-sub">Most boilerplates skip these. We didn't.</p>
+          <p class="specs-sub">Most starter kits skip these. We didn't.</p>
 
           <div class="specs-columns">
             <ul class="check-list">
@@ -1121,7 +1322,7 @@
           <div class="ai-grid">
             <div class="ai-content">
               <span class="badge-ai">2026 Standard</span>
-              <h2 class="ai-title">Architecture<br>Read by <span class="hl2">AI.</span></h2>
+              <h2 class="ai-title">Architecture<br>Read by <span class="hl2">Agents.</span></h2>
               <p class="ai-lead">
                 We optimized the file structure for LLMs.
                 Includes <code>.claude/CLAUDE.md</code> context files, Architecture Decision Records, and rigorous typing.
@@ -1131,23 +1332,23 @@
               </p>
             </div>
             <div class="ai-visual">
-              <div class="chat-interface">
-                <div class="chat-msg">
+              <div class="chat-interface" data-chat-animation>
+                <div class="chat-msg chat-msg--user chat-msg--hidden">
                   <span class="avatar">You</span>
                   <div class="chat-msg-content">
-                    <p>Add a new field to the User model.</p>
+                    <p class="typewriter" data-text="Add a new field to the User model."></p>
                   </div>
                 </div>
-                <div class="chat-msg">
-                  <span class="avatar robot">AI</span>
+                <div class="chat-msg chat-msg--ai chat-msg--hidden">
+                  <span class="avatar robot">Agent</span>
                   <div class="chat-msg-content">
-                    <p>I see you're using the <strong>Hexagonal Pattern</strong>. I will:</p>
+                    <p class="stream-text" data-text="I see you're using the **Hexagonal Pattern**. I will:"></p>
                     <ul class="ai-steps">
-                      <li>1. Update <code>packages/db/schema/users.ts</code></li>
-                      <li>2. Regenerate <code>packages/contracts/src/users.ts</code></li>
-                      <li>3. Update <code>apps/server/src/modules/users</code></li>
+                      <li class="stream-line" data-text="1. Update packages/db/schema/users.ts"></li>
+                      <li class="stream-line" data-text="2. Regenerate packages/contracts/src/users.ts"></li>
+                      <li class="stream-line" data-text="3. Update apps/server/src/modules/users"></li>
                     </ul>
-                    <div class="ai-status">Context Loaded: <code>docs/specs/architecture.md</code></div>
+                    <div class="ai-status stream-line" data-text="Context Loaded: docs/specs/architecture.md"></div>
                   </div>
                 </div>
               </div>
