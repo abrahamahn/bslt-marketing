@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H40E17YVBM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-H40E17YVBM');
+    </script>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
@@ -223,10 +232,36 @@
         </div>
       </section>
 
+      <!-- WHO IT'S FOR -->
+      <section class="audience-section">
+        <div class="wrap">
+          <div class="audience-grid">
+            <div class="audience-card audience-card--for">
+              <h3 class="audience-title">Built for</h3>
+              <ul class="audience-list">
+                <li>Solo founders and small teams shipping SaaS products</li>
+                <li>Devs who can build features but hate rebuilding auth/billing/jobs</li>
+                <li>Apps that need background jobs, webhooks, and audit logs</li>
+                <li>Teams who want web + desktop from one codebase</li>
+              </ul>
+            </div>
+            <div class="audience-card audience-card--not">
+              <h3 class="audience-title">Not for</h3>
+              <ul class="audience-list">
+                <li>Throwaway MVPs where speed matters above everything</li>
+                <li>Teams committed to fully-managed dependencies everywhere</li>
+                <li>Non-technical founders looking for no-code solutions</li>
+                <li>Marketing sites or content-only products</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- TECH STACK MARQUEE -->
       <section class="marquee-section">
         <div class="wrap">
-          <p class="marquee-header">Enterprise-Grade Features</p>
+          <p class="marquee-header">Built With</p>
         </div>
         <div class="marquee" aria-label="Technologies used">
           <div class="marquee-track">
@@ -374,7 +409,7 @@
             <div class="card card--featured">
               <h3>The BSLT Standard</h3>
               <p>
-                Inherit a battle-tested <strong>Reference Architecture</strong>. Billing is compliant. Auth is secure. You write business logic.
+                Inherit a production-ready <strong>Reference Architecture</strong>. Auth, billing, and jobs are already wired. You write business logic.
               </p>
             </div>
           </div>
@@ -384,10 +419,10 @@
       <!-- OWNERSHIP -->
       <section id="compare" class="ownership-section">
         <div class="wrap">
-          <h2 class="section-title section-title--left">Don't Rent Your Foundation.<br><span class="hl2">Own It.</span></h2>
+          <h2 class="section-title section-title--left">Choose Ownership<br><span class="hl2">When It Matters.</span></h2>
           <p class="section-lead section-lead--left">
-            Managed services feel like speed until they become a tax.
-            Real tech companies like Notion and Spotify don't rely on black-box dependencies—they build <strong>internal libraries</strong>.
+            Managed services are great for speed early. Ownership helps when you need cost control, portability, or deeper customization.
+            BSLT gives you <strong>both options</strong>—start managed, migrate to self-hosted when ready.
             BSLT gives you that architecture on Day 1.
           </p>
 
@@ -407,13 +442,13 @@
               </div>
               <div class="compare-body">
                 <p class="compare-pain">
-                  Great for prototypes, fatal for scale. You trade velocity today for a <strong>20% "Convenience Tax"</strong> forever.
+                  Fast to start, but costs and constraints can grow. Consider the tradeoffs as you scale.
                 </p>
                 <ul class="compare-list">
-                  <li class="negative">Vendor Lock-in (Auth0, Firebase)</li>
+                  <li class="negative">Tied to specific vendors</li>
                   <li class="negative">Unpredictable pricing spikes</li>
                   <li class="negative">Data exists in black boxes</li>
-                  <li class="negative">Impossible to migrate later</li>
+                  <li class="negative">Harder to migrate as you scale</li>
                 </ul>
               </div>
             </div>
@@ -454,11 +489,11 @@
                   </svg>
                 </div>
                 <h3>The BSLT Standard</h3>
-                <span class="compare-sub">"Sovereign Architecture"</span>
+                <span class="compare-sub">Ownership-First Architecture</span>
               </div>
               <div class="compare-body">
                 <p class="compare-pain">
-                  The infrastructure of a Series B startup. <strong>5,300+ Tests.</strong> 100% Type Safety. You own the metal.
+                  A complete foundation with <strong>5,000+ tests</strong>, full type safety, and provider-swappable infrastructure.
                 </p>
                 <ul class="compare-list">
                   <li class="positive"><strong>Internal Package Architecture</strong></li>
@@ -475,7 +510,7 @@
             <div class="quality-bar-item">
               <span class="quality-number">5,300+</span>
               <span class="quality-label">Unit & E2E Tests</span>
-              <span class="quality-meta">Every <code>.ts</code> file has a matching <code>.test.ts</code>. No regressions.</span>
+              <span class="quality-meta">Colocated tests for every module. Designed to catch issues early.</span>
             </div>
             <div class="quality-divider"></div>
             <div class="quality-bar-item">
@@ -500,7 +535,7 @@
             <div class="asset-text">
               <h2 class="asset-title">14 Production Modules.<br><span class="hl2">Day One.</span></h2>
               <p class="asset-lead">
-                Auth, Billing, Media, Search, Admin, Desktop—all battle-tested and ready to ship.
+                Auth, Billing, Media, Search, Admin, Desktop—all production-ready and documented.
                 You aren't buying a starter kit; you're acquiring a <strong>complete product foundation</strong>.
               </p>
               <div class="asset-stats">
@@ -1090,10 +1125,10 @@
       <!-- SOVEREIGNTY -->
       <section id="sovereignty" class="sovereignty-section">
         <div class="wrap">
-          <h2 class="section-title">Zero Black Boxes.<br><span class="hl2">100% Code Sovereignty.</span></h2>
+          <h2 class="section-title">Full Source Access.<br><span class="hl2">No Hidden Dependencies.</span></h2>
           <p class="section-lead">
-            We replaced heavy, bloated dependencies with optimized internal libraries.
-            You own every line of code that runs your business.
+            We use focused internal libraries instead of heavy frameworks.
+            You can read, modify, and extend every line of code.
           </p>
 
           <div class="specs-grid">
@@ -1109,7 +1144,7 @@
               </div>
               <p>
                 Zero dependencies. Standard <code>History API</code> under the hood.
-                Our 150-line router in <code>packages/ui/router</code> is <strong>10% faster</strong> than react-router—and if you hate it, swap it out in 20 minutes.
+                Our 150-line router in <code>packages/ui/router</code> uses the standard History API—and if you prefer react-router, swap it in 20 minutes.
               </p>
             </div>
 
@@ -1136,11 +1171,11 @@
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                   </svg>
                 </div>
-                <h3>Sovereign Identity</h3>
+                <h3>Built-in Auth</h3>
               </div>
               <p>
-                No Auth0 tax. No Clerk lock-in.
-                A complete JWT implementation with <strong>Rotation</strong>, <strong>Reuse Detection</strong>, and <strong>Family Tracking</strong> built natively in <code>infrastructure/crypto</code>.
+                Native JWT implementation with <strong>Rotation</strong>, <strong>Reuse Detection</strong>, and <strong>Family Tracking</strong>.
+                Use it standalone, or integrate with Auth0/Clerk if you prefer managed auth.
               </p>
             </div>
 
@@ -1216,8 +1251,8 @@
                 </svg>
               </div>
               <div class="quality-content">
-                <h3 class="quality-title">6,000+ Tests</h3>
-                <p class="quality-desc">Battle-tested with comprehensive unit, integration, and E2E coverage. Ship with confidence.</p>
+                <h3 class="quality-title">5,000+ Tests</h3>
+                <p class="quality-desc">Comprehensive unit, integration, and E2E coverage across all modules.</p>
               </div>
             </div>
           </div>

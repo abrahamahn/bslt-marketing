@@ -22,6 +22,7 @@ import './modules/deep-tech/deep-tech.css';
 import './modules/asset/asset.css';
 import './modules/team-scale/team-scale.css';
 import './modules/gems/gems.css';
+import './modules/audience/audience.css';
 
 import { initNavbar } from './modules/navbar/navbar.ts';
 import { initKeyboardShortcuts } from './modules/keyboard/keyboard.ts';

@@ -1,0 +1,80 @@
+/* src/modules/audience/audience.css */
+
+.audience-section {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.audience-card {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.audience-card--for {
+  border-color: rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.audience-card--not {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.audience-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+  color: var(--color-muted);
+}
+
+.audience-card--for .audience-title {
+  color: #22c55e;
+}
+
+.audience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audience-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-muted);
+  padding-left: 20px;
+  position: relative;
+}
+
+.audience-card--for .audience-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.audience-card--not .audience-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-faint);
+}
