@@ -155,7 +155,7 @@ Add a `theme-color` meta tag so the browser chrome (address bar) matches your da
 
 ```html
 <meta name="theme-color" content="#0a0a0a" />
-<title>BLST | The Production-Grade SaaS Engine</title>
+<title>BSLT | The Production-Grade SaaS Engine</title>
 
 ```
 
@@ -167,7 +167,7 @@ Move away from "Auth and Payments" (generic) to "Web, Desktop, and Mobile" (uniq
 <div class="hero-content">
   <h1>The SaaS Engine for <span class="hl2">Serious Engineers</span>.</h1>
   <p class="sub">
-    BLST is a production-grade <strong>Reference Architecture</strong>.
+    BSLT is a production-grade <strong>Reference Architecture</strong>.
     Deploy a Hexagonal Node.js backend, a React web app, and a <strong>Native Electron Desktop app</strong>—all from one monorepo, on Day 1.
   </p>
   
@@ -175,7 +175,7 @@ Move away from "Auth and Payments" (generic) to "Web, Desktop, and Mobile" (uniq
     </div>
   
   <div class="copy-command-box">
-    <code class="command-text">npx create-blst-app@latest</code>
+    <code class="command-text">npx create-bslt-app@latest</code>
     </div>
 </div>
 
@@ -212,7 +212,7 @@ Don't just compare features; compare **Developer Experience**.
 <div class="compare-col">
   <div class="badge">
     <span class="chip"></span>
-    BLST Engine
+    BSLT Engine
   </div>
   <ul>
     <li><strong>Hexagonal</strong> Backend Architecture</li>
@@ -308,7 +308,7 @@ The `id="year"` in the footer is empty. Add this small script at the bottom of t
   
   // Optional: Copy command logic
   document.querySelector('.copy-command')?.addEventListener('click', () => {
-    navigator.clipboard.writeText('npx create-blst-app@latest');
+    navigator.clipboard.writeText('npx create-bslt-app@latest');
     // Add visual feedback class here
   });
 </script>

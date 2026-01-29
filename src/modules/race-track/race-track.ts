@@ -46,11 +46,11 @@ export function initRaceTrack(): () => void {
 
   const diyProgress = raceTrack.querySelector<HTMLElement>('.race-lane--diy .race-progress-fill');
   const diyStatus = raceTrack.querySelector<HTMLElement>('.race-lane--diy .race-status-text');
-  const blstProgress = raceTrack.querySelector<HTMLElement>('.race-lane--blst .race-progress-fill');
-  const blstStatus = raceTrack.querySelector<HTMLElement>('.race-lane--blst .race-status-text');
-  const blstTime = raceTrack.querySelector<HTMLElement>('.race-lane--blst .race-time');
+  const bsltProgress = raceTrack.querySelector<HTMLElement>('.race-lane--bslt .race-progress-fill');
+  const bsltStatus = raceTrack.querySelector<HTMLElement>('.race-lane--bslt .race-status-text');
+  const bsltTime = raceTrack.querySelector<HTMLElement>('.race-lane--bslt .race-time');
 
-  if (!diyProgress || !diyStatus || !blstProgress || !blstStatus || !blstTime) {
+  if (!diyProgress || !diyStatus || !bsltProgress || !bsltStatus || !bsltTime) {
     return () => undefined;
   }
 
@@ -74,11 +74,11 @@ export function initRaceTrack(): () => void {
     diyStatus.textContent = 'Waiting...';
     diyStatus.classList.remove('race-status--done', 'race-status--error');
 
-    blstProgress.style.width = '0%';
-    blstStatus.textContent = 'Ready';
-    blstStatus.classList.remove('race-status--done');
-    blstTime.textContent = '';
-    blstTime.classList.remove('race-time--visible');
+    bsltProgress.style.width = '0%';
+    bsltStatus.textContent = 'Ready';
+    bsltStatus.classList.remove('race-status--done');
+    bsltTime.textContent = '';
+    bsltTime.classList.remove('race-time--visible');
   };
 
   /**
@@ -90,25 +90,25 @@ export function initRaceTrack(): () => void {
 
     const reducedMotion = prefersReducedMotion();
 
-    // BLST: instant completion
+    // BSLT: instant completion
     if (reducedMotion) {
-      blstProgress.style.transition = 'none';
-      blstProgress.style.width = '100%';
-      blstStatus.textContent = 'Done!';
-      blstStatus.classList.add('race-status--done');
-      blstTime.textContent = `${BASALT_DURATION}ms`;
-      blstTime.classList.add('race-time--visible');
+      bsltProgress.style.transition = 'none';
+      bsltProgress.style.width = '100%';
+      bsltStatus.textContent = 'Done!';
+      bsltStatus.classList.add('race-status--done');
+      bsltTime.textContent = `${BASALT_DURATION}ms`;
+      bsltTime.classList.add('race-time--visible');
     } else {
-      blstProgress.style.transition = `width ${BASALT_DURATION}ms ease-out`;
-      blstProgress.style.width = '100%';
+      bsltProgress.style.transition = `width ${BASALT_DURATION}ms ease-out`;
+      bsltProgress.style.width = '100%';
 
-      const blstDone = window.setTimeout(() => {
-        blstStatus.textContent = 'Done!';
-        blstStatus.classList.add('race-status--done');
-        blstTime.textContent = `${BASALT_DURATION}ms`;
-        blstTime.classList.add('race-time--visible');
+      const bsltDone = window.setTimeout(() => {
+        bsltStatus.textContent = 'Done!';
+        bsltStatus.classList.add('race-status--done');
+        bsltTime.textContent = `${BASALT_DURATION}ms`;
+        bsltTime.classList.add('race-time--visible');
       }, BASALT_DURATION);
-      timeouts.push(blstDone);
+      timeouts.push(bsltDone);
     }
 
     // DIY: slow step-by-step progress

@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="BLST is a Production Reference Architecture. Deploy a Hexagonal backend, React web app, and Native Electron desktop app—all from one monorepo, on Day 1."
+      content="Production-ready TypeScript SaaS boilerplate with Hexagonal architecture. React, Fastify, Electron desktop, and 14 pre-built modules. Own your stack, ship faster."
     />
+    <meta name="keywords" content="typescript boilerplate, saas starter kit, react boilerplate, electron starter, fastify template, hexagonal architecture, monorepo starter, fullstack typescript, saas template, node.js boilerplate" />
+    <meta name="author" content="BSLT" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0a0a0a" />
-    <title>BLST | The Production-Grade SaaS Engine</title>
+    <title>BSLT - TypeScript SaaS Boilerplate | React, Fastify, Electron Starter Kit</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
-    <link rel="canonical" href="https://blst.dev/" />
+    <link rel="canonical" href="https://bslt.dev/" />
 
     <!-- Critical CSS to prevent FOUC -->
     <style>
@@ -29,34 +32,51 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://blst.dev/" />
-    <meta property="og:title" content="BLST | The Production-Grade SaaS Engine" />
+    <meta property="og:url" content="https://bslt.dev/" />
+    <meta property="og:site_name" content="BSLT" />
+    <meta property="og:title" content="BSLT - The TypeScript SaaS Engine for Serious Engineers" />
     <meta
       property="og:description"
-      content="Deploy a Hexagonal backend, React web app, and Native Electron desktop app—all from one monorepo, on Day 1."
+      content="14 production modules. React + Fastify + Electron. Hexagonal architecture. No vendor lock-in. Ship your SaaS in days, not months."
     />
-    <meta property="og:image" content="https://blst.dev/images/og-social.jpg" />
+    <meta property="og:image" content="https://bslt.dev/images/og-social.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BLST | The Production-Grade SaaS Engine" />
+    <meta name="twitter:site" content="@bslt_dev" />
+    <meta name="twitter:title" content="BSLT - TypeScript SaaS Boilerplate" />
     <meta
       name="twitter:description"
-      content="Deploy a Hexagonal backend, React web app, and Native Electron desktop app—all from one monorepo, on Day 1."
+      content="14 production modules. React + Fastify + Electron. No vendor lock-in. Ship your SaaS in days, not months."
     />
-    <meta name="twitter:image" content="https://blst.dev/images/og-social.jpg" />
+    <meta name="twitter:image" content="https://bslt.dev/images/og-social.jpg" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "BLST",
-        "description": "A Production Reference Architecture. Hexagonal backend, React web app, and Native Electron desktop app—all from one monorepo.",
+        "name": "BSLT",
+        "alternateName": "BSLT SaaS Engine",
+        "description": "Production-ready TypeScript SaaS boilerplate with Hexagonal architecture. Includes React frontend, Fastify backend, Electron desktop app, and 14 pre-built modules.",
         "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Any",
+        "operatingSystem": "Windows, macOS, Linux",
+        "programmingLanguage": "TypeScript",
+        "url": "https://bslt.dev",
+        "screenshot": "https://bslt.dev/images/og-social.jpg",
+        "featureList": "Hexagonal Architecture, React 19, Fastify 5, Electron Desktop, TypeScript, PostgreSQL, JWT Auth, Multi-tenancy, Turborepo Monorepo",
         "offers": {
-          "@type": "Offer",
-          "price": "250.00",
-          "priceCurrency": "USD"
+          "@type": "AggregateOffer",
+          "lowPrice": "249.00",
+          "highPrice": "999.00",
+          "priceCurrency": "USD",
+          "offerCount": "4"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "ratingCount": "14"
         }
       }
     </script>
@@ -66,7 +86,7 @@
     <header>
       <div class="wrap">
         <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="#top" aria-label="BLST home">
+          <a class="brand" href="#top" aria-label="BSLT home">
             <svg class="logo-svg" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
               <defs>
                 <linearGradient id="magma-glow" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -88,19 +108,19 @@
               <path d="M5,14 L9,18 L7,22" stroke="url(#magma-glow)" stroke-width="1.5" fill="none"/>
               <path d="M27,14 L23,18 L25,22" stroke="url(#magma-glow)" stroke-width="1.5" fill="none"/>
             </svg>
-            <span>BLST</span>
+            <span>BSLT</span>
             <span class="version-badge">v1.0</span>
           </a>
 
           <div class="nav-links">
             <a href="#features">Features</a>
             <a href="#pricing">Pricing</a>
-            <a href="https://docs.blst.dev" target="_blank" rel="noopener">Docs</a>
-            <a href="https://github.com/blst-dev/blst" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://docs.bslt.dev" target="_blank" rel="noopener">Docs</a>
+            <a href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">GitHub</a>
           </div>
 
           <div class="nav-cta">
-            <a class="btn primary" href="#pricing">Get BLST</a>
+            <a class="btn primary" href="#pricing">Get BSLT</a>
           </div>
         </nav>
       </div>
@@ -114,23 +134,22 @@
             <div class="hero-content">
               <h1>The SaaS Engine for <span class="hl2">Serious Engineers</span>.</h1>
               <p class="sub">
-                We spent 1,000+ hours writing, testing, and hardening the foundation—so you can focus on building real apps.
+                We spent 1,000+ hours writing, testing, and hardening the foundation—so you can build alone like a Pro, and scale to a Team without a rewrite.
                 Deploy a Hexagonal backend, React web app, and <strong>Native Electron Desktop</strong> from one monorepo, on Day 1.
               </p>
 
               <div class="hero-actions">
                 <a class="btn primary" href="#pricing">
-                  Deploy the Engine
-                  <span class="btn-time">(0.4s)</span>
+                  Get the Engine
                 </a>
-                <a class="btn" href="https://github.com/blst-dev/blst" target="_blank" rel="noopener">
+                <a class="btn" href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">
                   View Architecture
                 </a>
               </div>
 
               <!-- Copy Command -->
               <div class="copy-command-box">
-                <code class="command-text">npx create-blst-app</code>
+                <code class="command-text">npx create-bslt-app</code>
                 <button class="copy-command" type="button" aria-label="Copy command">
                   <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
@@ -177,8 +196,8 @@
                     <div class="race-progress-fill"></div>
                   </div>
                 </div>
-                <!-- BLST Lane -->
-                <div class="race-lane race-lane--blst">
+                <!-- BSLT Lane -->
+                <div class="race-lane race-lane--bslt">
                   <div class="race-lane-header">
                     <span class="race-lane-label">
                       <span class="race-lane-icon" aria-hidden="true">
@@ -186,7 +205,7 @@
                           <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"></polygon>
                         </svg>
                       </span>
-                      BLST
+                      BSLT
                     </span>
                     <div class="race-status">
                       <span class="race-status-text">Ready</span>
@@ -342,7 +361,7 @@
         <div class="wrap">
           <h2 class="section-title section-title--left">The Infrastructure Gap</h2>
           <p class="section-lead section-lead--left">
-            Most startups die building the foundation. BLST bridges the gap between "Hello World" and "Production Ready."
+            Most startups die building the foundation. BSLT bridges the gap between "Hello World" and "Production Ready."
           </p>
 
           <div class="cols">
@@ -353,7 +372,7 @@
               </p>
             </div>
             <div class="card card--featured">
-              <h3>The BLST Standard</h3>
+              <h3>The BSLT Standard</h3>
               <p>
                 Inherit a battle-tested <strong>Reference Architecture</strong>. Billing is compliant. Auth is secure. You write business logic.
               </p>
@@ -369,7 +388,7 @@
           <p class="section-lead section-lead--left">
             Managed services feel like speed until they become a tax.
             Real tech companies like Notion and Spotify don't rely on black-box dependencies—they build <strong>internal libraries</strong>.
-            BLST gives you that architecture on Day 1.
+            BSLT gives you that architecture on Day 1.
           </p>
 
           <div class="compare-grid">
@@ -424,7 +443,7 @@
               </div>
             </div>
 
-            <!-- The BLST Standard -->
+            <!-- The BSLT Standard -->
             <div class="compare-card compare-card--success featured-compare">
               <div class="compare-header">
                 <div class="compare-icon">
@@ -434,7 +453,7 @@
                     <polyline points="2 12 12 17 22 12" fill="none" stroke="currentColor" stroke-width="2"/>
                   </svg>
                 </div>
-                <h3>The BLST Standard</h3>
+                <h3>The BSLT Standard</h3>
                 <span class="compare-sub">"Sovereign Architecture"</span>
               </div>
               <div class="compare-body">
@@ -474,101 +493,60 @@
         </div>
       </section>
 
-      <!-- INTEGRATIONS GRID -->
-      <section class="integrations-section">
+      <!-- ASSET BLOCK -->
+      <section class="asset-section">
         <div class="wrap">
-          <h2 class="section-title section-title--spaced">Production Infrastructure,<br class="mobile-break"> Pre-Wired.</h2>
-          <div class="integrations-grid">
-            <!-- Payment -->
-            <div class="integration-item" data-integration="stripe" data-category="payment" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
-                </svg>
+          <div class="asset-grid">
+            <div class="asset-text">
+              <h2 class="asset-title">14 Production Modules.<br><span class="hl2">Day One.</span></h2>
+              <p class="asset-lead">
+                Auth, Billing, Media, Search, Admin, Desktop—all battle-tested and ready to ship.
+                You aren't buying a starter kit; you're acquiring a <strong>complete product foundation</strong>.
+              </p>
+              <div class="asset-stats">
+                <div class="stat-item">
+                  <span class="stat-val">14</span>
+                  <span class="stat-label">Production Modules</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-val">1,200+</span>
+                  <span class="stat-label">Source Files</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-val">5,300+</span>
+                  <span class="stat-label">Tests</span>
+                </div>
               </div>
-              <span class="integration-name">Stripe</span>
             </div>
-            <!-- Auth -->
-            <div class="integration-item" data-integration="google" data-category="auth" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                </svg>
+
+            <div class="asset-visual">
+              <div class="code-density-map">
+                <div class="density-row">
+                  <span class="density-folder">apps/server</span>
+                  <div class="density-bar" style="--bar-width: 85%"></div>
+                  <span class="density-count">6 modules</span>
+                </div>
+                <div class="density-row">
+                  <span class="density-folder">packages/core</span>
+                  <div class="density-bar" style="--bar-width: 60%"></div>
+                  <span class="density-count">4 modules</span>
+                </div>
+                <div class="density-row">
+                  <span class="density-folder">packages/ui</span>
+                  <div class="density-bar" style="--bar-width: 45%"></div>
+                  <span class="density-count">50+ components</span>
+                </div>
+                <div class="density-row">
+                  <span class="density-folder">apps/desktop</span>
+                  <div class="density-bar" style="--bar-width: 30%"></div>
+                  <span class="density-count">IPC bridge</span>
+                </div>
+                <div class="density-note">
+                  * Modular architecture. Delete what you don't need.
+                </div>
               </div>
-              <span class="integration-name">Google</span>
-            </div>
-            <div class="integration-item" data-integration="github" data-category="auth" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                </svg>
-              </div>
-              <span class="integration-name">GitHub</span>
-            </div>
-            <div class="integration-item" data-integration="magic" data-category="auth" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                </svg>
-              </div>
-              <span class="integration-name">Magic</span>
-            </div>
-            <div class="integration-item" data-integration="mfa" data-category="auth" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
-                </svg>
-              </div>
-              <span class="integration-name">MFA</span>
-            </div>
-            <!-- Ops -->
-            <div class="integration-item" data-integration="docker" data-category="ops" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/>
-                </svg>
-              </div>
-              <span class="integration-name">Docker</span>
-            </div>
-            <div class="integration-item" data-integration="aws" data-category="ops" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 01-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 01-.287-.375 6.18 6.18 0 01-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 01-.28.104.488.488 0 01-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 01.224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 011.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 00-.735-.136 6.02 6.02 0 00-.751-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 01-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 01.32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 01.311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 01-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 01-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 01-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 00.415-.758.777.777 0 00-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 01-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 01.24.2.43.43 0 01.071.263v.375c0 .168-.064.256-.184.256a.83.83 0 01-.303-.096 3.652 3.652 0 00-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/>
-                </svg>
-              </div>
-              <span class="integration-name">AWS</span>
-            </div>
-            <!-- Data -->
-            <div class="integration-item" data-integration="postgresql" data-category="data" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4648a9.8753 9.8753 0 0 0-2.085-.2096c-1.1586-.0015-2.1927.2286-3.0783.6463C8.6815.5008 7.8005.2922 6.7186.3535c-1.3805.0782-2.6943.569-3.7151 1.3717-.8117.638-1.7481 1.7333-2.128 3.5095-.1376.6424-.0135 1.3858.0921 1.8991.0534.259.1226.5348.1958.8266.1174.4684.2507.999.3475 1.5862.1456.8825.1881 1.8367.0061 2.7566-.0999.5043-.4497 1.5375-.7467 2.4272-.1183.3543-.2271.68-.3088.9461a4.3424 4.3424 0 0 0-.1678.5805c-.3063 1.4608.1788 2.3528.8054 2.7961.3157.2232.7308.3664 1.1681.4052.0492.0044.0984.0066.1476.0066.7125 0 1.409-.362 2.0192-.5699.3584-.255.657-.5765.8878-.9449.1104-.1762.3202-.6178.5513-1.1177.1372-.2967.2844-.615.4277-.9142.1586-.3317.3082-.6371.4317-.8587.1262-.2266.2159-.3678.247-.4016.0024-.0023.0047-.0047.007-.007.0766-.0603.2049-.1383.3619-.2177.2665-.1345.5693-.2683.8443-.397.7829-.3666 1.5454-.7232 2.0377-1.0732.4151-.2951.7459-.6197.9852-1.0086.2643-.4297.4036-.9319.4036-1.4822 0-.1648-.0145-.3325-.0439-.5016a2.6268 2.6268 0 0 0-.0888-.4154 3.7826 3.7826 0 0 0-.0642-.2067c-.0124-.0359-.0234-.0682-.0318-.0967.0188.0038.0394.0078.0618.0121.2614.0504.5684.0782.9156.0832.2586.0037.5266-.0086.7986-.0367.5459-.0563 1.0853-.1763 1.5846-.3648 1.0028-.3786 1.7406-.9497 2.1192-1.6516.1538-.2852.2346-.5862.2346-.9167 0-.102-.0086-.2059-.0253-.3103l-.0048-.0301zM2.4686 9.5765c.0743-.2457.1462-.4842.2113-.7131.1305-.4595.2473-.8715.3416-1.2451.3183-1.2615.5507-2.1411.918-2.7715.2528-.4337.5581-.7658.946-1.0007.3911-.2369.8709-.3932 1.4659-.4726a4.0323 4.0323 0 0 1 .5748-.0299c.6174 0 1.1592.1505 1.5993.3568-.1224.1234-.2428.2518-.3595.3846-.3091.3518-.6004.7427-.8678 1.1661-.5653.8969-.9984 1.8847-1.3137 2.9285-.2469.8176-.4049 1.6607-.4859 2.4971-.0093.0957-.0176.1907-.025.2852-.096.1073-.1907.2145-.2835.3222-.3808.4417-.7405.8907-1.0647 1.3505l-.0017.0024c-.1634-.3882-.322-.788-.4864-1.1996-.3212-.8039-.6058-1.5856-.8374-2.2954-.2038-.6248-.3642-1.2028-.4838-1.7329-.0097-.0426-.0184-.0828-.0272-.1227-.0066-.0299-.0131-.0598-.0195-.0895.0016-.002.0032-.0039.0048-.0058.0554-.0653.1103-.1333.165-.202a.5634.5634 0 0 0 .0064-.0076c.1472-.1812.2889-.3596.425-.5334.3024-.3858.5795-.7613.8363-1.1248z"/>
-                </svg>
-              </div>
-              <span class="integration-name">Postgres</span>
-            </div>
-            <div class="integration-item" data-integration="redis" data-category="data" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M10.5 2.661l.54.997-1.797.644 2.409.218.748 1.246.467-1.163 2.282-.164-1.706-.661.526-1.025-1.321.598zm5.616 3.091c-.706-.276-1.773-.632-2.97-.632-1.203 0-2.018.348-2.018 1.112 0 .692 1.202.993 2.674 1.155 2.568.294 4.354.937 4.354 2.956 0 2.395-2.177 3.533-4.915 3.533-2.277 0-4.207-.556-5.572-1.424l1.188-1.754c.858.628 2.427 1.211 4.384 1.211 1.386 0 2.181-.442 2.181-1.155 0-.685-1.143-.93-2.723-1.112-2.513-.292-4.305-.916-4.305-2.891 0-2.259 1.929-3.575 4.694-3.575 2.107 0 3.814.456 4.941 1.009zM3.5 11.5v4h4v-4zm0-7v4h4v-4z"/>
-                </svg>
-              </div>
-              <span class="integration-name">Redis</span>
-            </div>
-            <!-- Tools -->
-            <div class="integration-item" data-integration="resend" data-category="tools" tabindex="0">
-              <div class="integration-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm2.4 0L12 11.5 19.6 6H4.4zM20 7.9l-8 5.6-8-5.6V18h16V7.9z"/>
-                </svg>
-              </div>
-              <span class="integration-name">Resend</span>
             </div>
           </div>
-          <p class="integrations-description" data-default="Hover over an integration to learn more">Hover over an integration to learn more</p>
         </div>
       </section>
 
@@ -697,11 +675,11 @@
               </div>
             </div>
 
-            <!-- Card 4: Security Engine -->
+            <!-- Card 4: Complete Auth System -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Security Engine</h3>
-                <p class="bento-card-desc">Enterprise-grade auth with native JWT, token rotation, and AES-256 encryption. No Auth0 tax.</p>
+                <h3 class="bento-card-title">Complete Auth System</h3>
+                <p class="bento-card-desc">Password, Magic Link, and OAuth (Apple, GitHub, Google). JWT rotation, lockout protection, and audit logging built-in.</p>
               </div>
               <div class="bento-visual">
                 <div class="tier-diagram">
@@ -710,52 +688,52 @@
                       <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Native JWT Auth</div>
-                      <div class="tier-desc">No third-party fees, full control</div>
+                      <div class="tier-name">Password + Magic Link</div>
+                      <div class="tier-desc">Email verification, password reset</div>
                     </div>
                   </div>
                   <div class="tier-layer tier-layer--pro">
                     <svg class="tier-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Token Family Rotation</div>
-                      <div class="tier-desc">Reuse detection, auto-revoke</div>
+                      <div class="tier-name">OAuth Providers</div>
+                      <div class="tier-desc">Apple, GitHub, Google</div>
                     </div>
                   </div>
                   <div class="tier-layer tier-layer--internal">
                     <svg class="tier-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                      <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">AES-256 + CSP</div>
-                      <div class="tier-desc">Encrypted CSRF, nonce headers</div>
+                      <div class="tier-name">Security Hardened</div>
+                      <div class="tier-desc">JWT rotation, lockout, audit logs</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 5: Ops & Tooling Engine -->
+            <!-- Card 5: Billing Integration -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Ops & Tooling Engine</h3>
-                <p class="bento-card-desc">A dedicated <code>tooling/</code> suite to keep your repo healthy. Includes <strong>Bundle Monitor</strong>, <strong>Security Audit</strong>, and <strong>Health Checks</strong>.</p>
+                <h3 class="bento-card-title">Billing Integration</h3>
+                <p class="bento-card-desc">Production-ready Stripe and PayPal. Webhooks, subscription management, and an admin billing dashboard included.</p>
               </div>
               <div class="bento-visual">
                 <div class="terminal-list">
-                  <div class="term-line"><span class="term-green">&#10004;</span> tooling/scripts/audit/bundle-size.ts</div>
-                  <div class="term-line"><span class="term-green">&#10004;</span> tooling/scripts/audit/security-audit.ts</div>
-                  <div class="term-line"><span class="term-green">&#10004;</span> infra/cloud/digitalocean/main.tf</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> infrastructure/billing/stripe-provider.ts</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> infrastructure/billing/paypal-provider.ts</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> modules/billing/webhooks/</div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 6: Media Processing -->
+            <!-- Card 6: Job Queue System -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Media Processing</h3>
-                <p class="bento-card-desc">Server-side FFmpeg integration. Process audio, optimize images, and stream video without external APIs.</p>
+                <h3 class="bento-card-title">Durable Job Queue</h3>
+                <p class="bento-card-desc">PostgreSQL-backed job queue with retries, scheduled jobs, and an admin monitoring dashboard. No Redis or external services required.</p>
               </div>
               <div class="bento-visual">
                 <div class="folder-tree">
@@ -763,29 +741,147 @@
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                     </svg>
-                    <span>packages/media/</span>
+                    <span>infrastructure/jobs/</span>
                   </div>
                   <div class="folder-item folder-indent folder-item--highlight">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
+                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.89 2-2V8l-6-6z"/>
                     </svg>
-                    <span>ffmpeg.service.ts</span>
+                    <span>postgresStore.ts</span>
                   </div>
                   <div class="folder-item folder-indent">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span>image.optimizer.ts</span>
+                    <span>queueServer.ts</span>
                   </div>
                   <div class="folder-item folder-indent">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span>stream.handler.ts</span>
+                    <span>scheduled/loginCleanup.ts</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN DASHBOARD -->
+      <section class="admin-section">
+        <div class="wrap">
+          <div class="section-header-center">
+            <h2 class="section-title">Full Admin Panel.<br><span class="hl2">Day One.</span></h2>
+            <p class="section-lead">
+              Don't write SQL queries to ban users or check job statuses.
+              BSLT ships with a production-ready operations dashboard.
+            </p>
+          </div>
+
+          <div class="admin-grid">
+            <div class="admin-card">
+              <div class="admin-icon">🚨</div>
+              <h3>Security Audit</h3>
+              <p>View failed login attempts, potential attacks, and banned IPs in real-time. <code>SecurityEventsPage.tsx</code></p>
+            </div>
+
+            <div class="admin-card">
+              <div class="admin-icon">🔄</div>
+              <h3>Job Monitor</h3>
+              <p>See your Postgres Job Queue health. Retry failed emails or processing tasks with one click. <code>JobMonitorPage.tsx</code></p>
+            </div>
+
+            <div class="admin-card">
+              <div class="admin-icon">👥</div>
+              <h3>User Management</h3>
+              <p>Impersonate users, manage subscriptions, and handle support without touching the database. <code>UserListPage.tsx</code></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM SCALABILITY -->
+      <section id="team-scale" class="team-section">
+        <div class="wrap">
+          <div class="team-header">
+            <h2 class="section-title">Built for the <br><span class="hl2">Growing Team.</span></h2>
+            <p class="section-lead">
+              Usually, velocity drops as headcount grows. BSLT breaks that law.
+              Our architecture uses <strong>Contract-Driven Development</strong> and <strong>Automated Governance</strong> to let frontend and backend teams work in parallel without collisions.
+            </p>
+          </div>
+
+          <div class="team-grid">
+
+            <div class="team-card">
+              <div class="team-visual">
+                <div class="contract-diagram">
+                  <div class="cd-node fe">Frontend Dev</div>
+                  <div class="cd-bridge">
+                    <span class="cd-label">packages/contracts</span>
+                    <span class="cd-lock">Zod Schema</span>
+                  </div>
+                  <div class="cd-node be">Backend Dev</div>
+                </div>
+              </div>
+              <div class="team-content">
+                <h3>Parallel Velocity</h3>
+                <p>
+                  Stop saying "Is the API ready yet?"
+                  Define the interface in <code>packages/contracts</code> first.
+                  The Backend team builds the implementation. The Frontend team builds the UI using mocked types.
+                  <strong>Zero blocking dependencies.</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="team-card reverse">
+              <div class="team-visual">
+                <div class="guardrail-visual">
+                  <div class="gr-item">
+                    <span class="gr-status pass">Pass</span>
+                    <span class="gr-text">No Circular Dependencies</span>
+                  </div>
+                  <div class="gr-item">
+                    <span class="gr-status pass">Pass</span>
+                    <span class="gr-text">Strict Boundary Checks</span>
+                  </div>
+                  <div class="gr-item">
+                    <span class="gr-status fail">Block</span>
+                    <span class="gr-text">Direct DB Access in UI</span>
+                  </div>
+                </div>
+              </div>
+              <div class="team-content">
+                <h3>The "Robot CTO"</h3>
+                <p>
+                  You can't review every PR. BSLT's <code>tooling/</code> scripts act as an automated architect.
+                  It enforces strict boundaries (e.g., "UI cannot import Database code") at the compiler level.
+                  Junior devs <em>cannot</em> break the architecture.
+                </p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-visual">
+                <div class="doc-visual">
+                  <div class="doc-tooltip">
+                    <code>useVirtualScroll()</code>
+                    <p>@param itemHeight - Fixed height of row<br>@returns { scrollTop, visibleItems }</p>
+                  </div>
+                  <span class="doc-cursor">👆</span>
+                </div>
+              </div>
+              <div class="team-content">
+                <h3>Instant Onboarding</h3>
+                <p>
+                  100% JSDoc coverage and collocated tests (<code>file.ts</code> + <code>file.test.ts</code>) mean the code explains itself.
+                  A new hire can understand the business logic of <code>modules/billing</code> by reading the spec, not by pestering the founder.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -811,9 +907,8 @@
                 <h3>The 1kb Router</h3>
               </div>
               <p>
-                We ripped out <code>react-router-dom</code>.
-                BLST uses a custom 150-line type-safe router in <code>packages/ui/router</code>.
-                <strong>10% faster</strong>, simpler, and fully yours.
+                Zero dependencies. Standard <code>History API</code> under the hood.
+                Our 150-line router in <code>packages/ui/router</code> is <strong>10% faster</strong> than react-router—and if you hate it, swap it out in 20 minutes.
               </p>
             </div>
 
@@ -862,155 +957,6 @@
               <p>
                 23+ Custom Hooks like <code>useVirtualScroll</code> and <code>useOptimizedMemo</code>.
                 A complete component library using CSS Variables for zero-runtime overhead.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MEDIA ENGINE -->
-      <section class="deep-tech-section">
-        <div class="wrap">
-          <div class="dt-grid">
-            <div class="dt-content">
-              <span class="dt-label">packages/media</span>
-              <h2 class="dt-title">A Dedicated<br><span class="hl2">Media Processing Pipeline.</span></h2>
-              <p class="dt-desc">
-                Most apps rely on expensive external APIs for media. BLST includes a server-side media engine powered by FFmpeg.
-              </p>
-              <ul class="dt-features">
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon points="23 7 16 12 23 17 23 7"/>
-                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-                  </svg>
-                  <div>
-                    <strong>Smart Streaming:</strong> <code>streaming.ts</code> handles byte-range requests for video.
-                  </div>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <div>
-                    <strong>Image Optimization:</strong> Native resizing and format conversion without 3rd party costs.
-                  </div>
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                    <line x1="12" y1="19" x2="12" y2="23"/>
-                  </svg>
-                  <div>
-                    <strong>Metadata Extraction:</strong> <code>audio-metadata.ts</code> parses duration and bitrate automatically.
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="dt-visual">
-              <div class="pipeline-visual">
-                <div class="pipe-node">Raw Upload</div>
-                <div class="pipe-arrow">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </div>
-                <div class="pipe-box">
-                  <div class="pipe-code">ffmpeg-wrapper.ts</div>
-                  <div class="pipe-status">Processing...</div>
-                </div>
-                <div class="pipe-arrow">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </div>
-                <div class="pipe-node pipe-node--success">Optimized Stream</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SEARCH PROVIDER -->
-      <section class="feature-block-section">
-        <div class="wrap">
-          <div class="feature-block">
-            <div class="feature-header">
-              <h3>The "Scale-Proof" Search Provider</h3>
-              <p>
-                The <code>infrastructure/search</code> module uses the Provider Pattern.
-                Start with <strong>Postgres Full-Text Search</strong> today.
-                Switch to <strong>Elasticsearch</strong> tomorrow by changing one config line.
-                Your application code (<code>search.query()</code>) never changes.
-              </p>
-            </div>
-            <div class="provider-toggle">
-              <div class="config-line">
-                <span class="cfg-key">SEARCH_PROVIDER</span><span class="cfg-eq">=</span><span class="cfg-val">'sql'</span>
-                <span class="cfg-comment">// Day 1: Simple</span>
-              </div>
-              <div class="config-line config-line--faded">
-                <span class="cfg-key">SEARCH_PROVIDER</span><span class="cfg-eq">=</span><span class="cfg-val">'elasticsearch'</span>
-                <span class="cfg-comment">// Day 100: Massive Scale</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- UX SECTION -->
-      <section class="ux-section">
-        <div class="wrap">
-          <h2 class="section-title">The 1% User Experience.</h2>
-          <p class="section-lead">Features that separate productivity tools from toys.</p>
-
-          <div class="ux-grid">
-            <div class="ux-card">
-              <div class="ux-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="1 4 1 10 7 10"/>
-                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
-                </svg>
-              </div>
-              <h3>Native Undo/Redo</h3>
-              <p>
-                Building "Command-Z" is hard. We solved it.
-                <code>UndoRedoStack.ts</code> tracks mutations and handles state rollback automatically.
-                Essential for building complex SaaS tools.
-              </p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="8" y1="6" x2="21" y2="6"/>
-                  <line x1="8" y1="12" x2="21" y2="12"/>
-                  <line x1="8" y1="18" x2="21" y2="18"/>
-                  <line x1="3" y1="6" x2="3.01" y2="6"/>
-                  <line x1="3" y1="12" x2="3.01" y2="12"/>
-                  <line x1="3" y1="18" x2="3.01" y2="18"/>
-                </svg>
-              </div>
-              <h3>Virtual Scroll Engine</h3>
-              <p>
-                Render 10,000 rows without lag.
-                Our custom <code>useVirtualScroll</code> hook handles windowing logic so your dashboards remain buttery smooth at enterprise scale.
-              </p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                  <line x1="8" y1="21" x2="16" y2="21"/>
-                  <line x1="12" y1="17" x2="12" y2="21"/>
-                </svg>
-              </div>
-              <h3>Type-Safe IPC</h3>
-              <p>
-                Most Electron apps crash because the bridge is fragile.
-                <code>electron/types/ipc.ts</code> ensures the frontend knows exactly what the backend can do. Fully typed.
               </p>
             </div>
           </div>
@@ -1077,274 +1023,6 @@
         </div>
       </section>
 
-      <!-- LIGHTNING IDE -->
-      <section class="lightning-section">
-        <div class="wrap">
-          <h2 class="section-title">Extensible by Design</h2>
-          <p class="section-lead">Add production-grade modules with a single command.</p>
-
-          <div class="lightning-ide">
-            <div class="lightning-ide-header">
-              <div class="lightning-ide-dots">
-                <span class="lightning-dot lightning-dot--red" aria-hidden="true"></span>
-                <span class="lightning-dot lightning-dot--yellow" aria-hidden="true"></span>
-                <span class="lightning-dot lightning-dot--green" aria-hidden="true"></span>
-              </div>
-              <span class="lightning-ide-title">blst-project</span>
-              <button class="lightning-add-btn" type="button">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <line x1="12" y1="5" x2="12" y2="19"></line>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                </svg>
-                Add Subscription
-              </button>
-            </div>
-            <div class="lightning-ide-body">
-              <div class="lightning-sidebar">
-                <div class="lightning-sidebar-title">Files</div>
-                <div class="lightning-files">
-                  <div class="lightning-file">
-                    <svg class="lightning-file-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
-                    </svg>
-                    <span>src/</span>
-                  </div>
-                  <div class="lightning-file" style="padding-left: 20px;">
-                    <svg class="lightning-file-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
-                    </svg>
-                    <span>index.ts</span>
-                  </div>
-                  <div class="lightning-file" style="padding-left: 20px;">
-                    <svg class="lightning-file-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/>
-                    </svg>
-                    <span>auth.ts</span>
-                  </div>
-                  <div class="lightning-files-divider"></div>
-                  <div class="lightning-files-new" aria-live="polite">
-                    <!-- New files appear here -->
-                  </div>
-                </div>
-              </div>
-              <div class="lightning-terminal">
-                <div class="lightning-terminal-prompt">
-                  <span class="lightning-terminal-symbol">$</span>
-                  <span class="lightning-terminal-input"></span>
-                  <span class="lightning-cursor" aria-hidden="true"></span>
-                </div>
-              </div>
-            </div>
-            <div class="lightning-toast" aria-live="polite">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              Subscription module added in 400ms
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CODE PROOF -->
-      <section id="code-proof">
-        <div class="wrap">
-          <h2 class="section-title">Reference Architecture</h2>
-          <p class="section-lead">
-            Production patterns you can read, understand, and own.
-          </p>
-
-          <div class="code-tabs">
-            <div class="code-tabs-list" role="tablist" aria-label="Code examples">
-              <button class="code-tab code-tab--active" role="tab" aria-selected="true" data-tab="api-route">
-                api-route.ts
-              </button>
-              <button class="code-tab" role="tab" aria-selected="false" data-tab="schema">
-                schema.ts
-              </button>
-              <button class="code-tab" role="tab" aria-selected="false" data-tab="subscription">
-                subscription.ts
-              </button>
-              <button class="code-tab" role="tab" aria-selected="false" data-tab="audit">
-                audit.ts
-              </button>
-            </div>
-
-            <div class="code-panel code-panel--active" data-panel="api-route" role="tabpanel">
-              <button class="code-copy" type="button" aria-label="Copy code" data-panel="api-route">
-                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </button>
-              <div class="code-block"><code><span class="token-keyword">import</span> { defineRoute } <span class="token-keyword">from</span> <span class="token-string">'@blst/server'</span>;
-<span class="token-keyword">import</span> { z } <span class="token-keyword">from</span> <span class="token-string">'zod'</span>;
-<span class="token-keyword">import</span> { db } <span class="token-keyword">from</span> <span class="token-string">'@/infra/database'</span>;
-
-<span class="token-keyword">const</span> <span class="token-function">schema</span> <span class="token-operator">=</span> z.<span class="token-function">object</span>({
-  email: z.<span class="token-function">string</span>().<span class="token-function">email</span>(),
-  name: z.<span class="token-function">string</span>().<span class="token-function">min</span>(<span class="token-number">2</span>),
-});
-
-<span class="token-keyword">export default</span> <span class="token-function">defineRoute</span>({
-  method: <span class="token-string">'POST'</span>,
-  path: <span class="token-string">'/api/users'</span>,
-  schema,
-  <span class="token-keyword">async</span> <span class="token-function">handler</span>(req) {
-    <span class="token-keyword">const</span> user <span class="token-operator">=</span> <span class="token-keyword">await</span> db.user.<span class="token-function">create</span>({
-      data: req.body,
-    });
-    <span class="token-keyword">return</span> { user };
-  },
-});</code></div>
-            </div>
-
-            <div class="code-panel" data-panel="schema" role="tabpanel" hidden>
-              <button class="code-copy" type="button" aria-label="Copy code" data-panel="schema">
-                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </button>
-              <div class="code-block"><code><span class="token-keyword">import</span> { pgTable, text, timestamp } <span class="token-keyword">from</span> <span class="token-string">'drizzle-orm/pg-core'</span>;
-
-<span class="token-keyword">export const</span> <span class="token-function">users</span> = <span class="token-function">pgTable</span>(<span class="token-string">'users'</span>, {
-  id: <span class="token-function">text</span>(<span class="token-string">'id'</span>).<span class="token-function">primaryKey</span>(),
-  email: <span class="token-function">text</span>(<span class="token-string">'email'</span>).<span class="token-function">unique</span>().<span class="token-function">notNull</span>(),
-  name: <span class="token-function">text</span>(<span class="token-string">'name'</span>).<span class="token-function">notNull</span>(),
-  createdAt: <span class="token-function">timestamp</span>(<span class="token-string">'created_at'</span>).<span class="token-function">defaultNow</span>(),
-});
-
-<span class="token-keyword">export const</span> <span class="token-function">subscriptions</span> = <span class="token-function">pgTable</span>(<span class="token-string">'subscriptions'</span>, {
-  id: <span class="token-function">text</span>(<span class="token-string">'id'</span>).<span class="token-function">primaryKey</span>(),
-  userId: <span class="token-function">text</span>(<span class="token-string">'user_id'</span>).<span class="token-function">references</span>(() => users.id),
-  stripeId: <span class="token-function">text</span>(<span class="token-string">'stripe_id'</span>).<span class="token-function">unique</span>(),
-  status: <span class="token-function">text</span>(<span class="token-string">'status'</span>).<span class="token-function">notNull</span>(),
-  plan: <span class="token-function">text</span>(<span class="token-string">'plan'</span>).<span class="token-function">notNull</span>(),
-});</code></div>
-            </div>
-
-            <div class="code-panel" data-panel="subscription" role="tabpanel" hidden>
-              <button class="code-copy" type="button" aria-label="Copy code" data-panel="subscription">
-                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </button>
-              <div class="code-block"><code><span class="token-keyword">import</span> Stripe <span class="token-keyword">from</span> <span class="token-string">'stripe'</span>;
-<span class="token-keyword">import</span> { db } <span class="token-keyword">from</span> <span class="token-string">'@/infra/database'</span>;
-
-<span class="token-keyword">export async function</span> <span class="token-function">handleSubscriptionUpdated</span>(
-  event: Stripe.Event
-) {
-  <span class="token-keyword">const</span> subscription <span class="token-operator">=</span> event.data.object <span class="token-keyword">as</span> <span class="token-type">Stripe.Subscription</span>;
-
-  <span class="token-keyword">await</span> db.subscription.<span class="token-function">upsert</span>({
-    where: { stripeId: subscription.id },
-    update: {
-      status: subscription.status,
-      plan: subscription.items.data[<span class="token-number">0</span>].price.id,
-    },
-    create: {
-      stripeId: subscription.id,
-      userId: subscription.metadata.userId,
-      status: subscription.status,
-      plan: subscription.items.data[<span class="token-number">0</span>].price.id,
-    },
-  });
-}</code></div>
-            </div>
-
-            <div class="code-panel" data-panel="audit" role="tabpanel" hidden>
-              <button class="code-copy" type="button" aria-label="Copy code" data-panel="audit">
-                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                <svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-              </button>
-              <div class="code-block"><code><span class="token-keyword">import</span> { checkBundleSize } <span class="token-keyword">from</span> <span class="token-string">'@tooling/audit'</span>;
-
-<span class="token-comment">// This runs on every CI push to prevent bloat</span>
-<span class="token-keyword">export async function</span> <span class="token-function">auditBuild</span>() {
-  <span class="token-keyword">const</span> report <span class="token-operator">=</span> <span class="token-keyword">await</span> <span class="token-function">checkBundleSize</span>({
-    maxSize: <span class="token-string">'150kb'</span>,
-    modules: [<span class="token-string">'@blst/core'</span>, <span class="token-string">'@blst/ui'</span>]
-  });
-
-  <span class="token-keyword">if</span> (report.failed) {
-    <span class="token-function">failCI</span>(<span class="token-string">"Bundle size exceeded limits."</span>);
-  }
-}</code></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TOOLING -->
-      <section class="tooling-section">
-        <div class="wrap">
-          <div class="feature-split">
-            <div class="feature-text">
-              <h2 class="section-title section-title--left">The Repo that<br>Maintains Itself.</h2>
-              <p class="section-lead section-lead--left">
-                Spaghetti code happens when configuration drifts. BLST includes a dedicated <code>tooling/</code> suite to keep your architecture strict automatically.
-              </p>
-              <ul class="tooling-list">
-                <li>
-                  <strong>Auto-Sync Aliases:</strong>
-                  <code>sync-aliases.ts</code> automatically updates your <code>tsconfig.json</code> when you add new packages.
-                </li>
-                <li>
-                  <strong>Bundle Monitor:</strong>
-                  <code>audit/bundle-size.ts</code> fails CI if your frontend bundle exceeds 150kb.
-                </li>
-                <li>
-                  <strong>Security Audit:</strong>
-                  Automated dependency scanning in the pre-push hook.
-                </li>
-              </ul>
-            </div>
-            <div class="feature-visual">
-              <div class="terminal-window">
-                <div class="term-header">
-                  <span class="term-dot term-dot--red"></span>
-                  <span class="term-dot term-dot--yellow"></span>
-                  <span class="term-dot term-dot--green"></span>
-                </div>
-                <div class="term-body">
-                  <div class="term-row">
-                    <span class="term-prompt">$</span> pnpm run audit:all
-                  </div>
-                  <div class="term-row term-row--success">
-                    <span class="term-green">&#10004;</span> Syncing TS Config Paths... Done (4ms)
-                  </div>
-                  <div class="term-row term-row--success">
-                    <span class="term-green">&#10004;</span> Checking Bundle Size... 84kb (Pass)
-                  </div>
-                  <div class="term-row term-row--success">
-                    <span class="term-green">&#10004;</span> Security Audit... 0 Vulnerabilities
-                  </div>
-                  <div class="term-row">
-                    <span class="term-blue">Ready to deploy.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- SPECS LIST -->
       <section class="specs-list-section">
         <div class="wrap">
@@ -1353,73 +1031,124 @@
 
           <div class="specs-columns">
             <ul class="check-list">
-              <li><strong>Graceful Shutdown:</strong> No dropped requests during deploys.</li>
-              <li><strong>Correlation IDs:</strong> Trace requests across the stack (<code>middleware/correlationId</code>).</li>
-              <li><strong>Health Checks:</strong> Kubernetes-ready <code>/health</code> endpoints.</li>
-              <li><strong>Security Headers:</strong> Strict CSP with Nonce-based execution.</li>
-              <li><strong>Rate Limiting:</strong> Token bucket algorithm (<code>security/rate-limit</code>).</li>
+              <li><strong>Complete Auth:</strong> Password, Magic Link, OAuth (Apple, GitHub, Google).</li>
+              <li><strong>Billing Ready:</strong> Stripe + PayPal providers with webhook handlers.</li>
+              <li><strong>Job Queue:</strong> PostgreSQL-backed durable queue with scheduled jobs.</li>
+              <li><strong>Admin Dashboard:</strong> User management, billing, jobs, security events.</li>
+              <li><strong>Realtime:</strong> WebSocket PubSub with subscription management.</li>
+              <li><strong>Email System:</strong> SMTP provider with templating engine.</li>
+              <li><strong>Push Notifications:</strong> Web Push via FCM with subscription management.</li>
             </ul>
             <ul class="check-list">
-              <li><strong>Audit Logging:</strong> Record security events to DB (<code>security/audit</code>).</li>
-              <li><strong>Media Processing:</strong> Server-side FFmpeg & Image Optimization.</li>
+              <li><strong>Media Pipeline:</strong> FFmpeg, image optimization, secure streaming.</li>
+              <li><strong>Search Engine:</strong> SQL full-text + Elasticsearch provider swap.</li>
+              <li><strong>Rate Limiting:</strong> Token bucket with endpoint-specific presets.</li>
+              <li><strong>Security Hardened:</strong> JWT rotation, account lockout, audit logs.</li>
+              <li><strong>Infra as Code:</strong> Terraform for DigitalOcean + GCP, Docker, Caddy.</li>
+              <li><strong>CI/CD Pipelines:</strong> GitHub Actions for deploy, rollback, security scans.</li>
               <li><strong>Type-Safe IPC:</strong> Secured Electron bridge (<code>electron/ipc</code>).</li>
-              <li><strong>Optimistic Locking:</strong> Database conflict prevention (<code>utils/optimistic-lock</code>).</li>
-              <li><strong>Automated Audits:</strong> Scripts for Bundle Size & Security (<code>tooling/audit</code>).</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- ASSET BLOCK -->
-      <section class="asset-section">
+      <!-- HIDDEN GEMS -->
+      <section class="gems-section">
         <div class="wrap">
-          <div class="asset-grid">
-            <div class="asset-text">
-              <h2 class="asset-title">The 327,000-Line<br><span class="hl2">Head Start.</span></h2>
-              <p class="asset-lead">
-                Building this architecture from scratch would take a Senior Engineer <strong>2+ years</strong>.
-                You aren't just buying a template; you are acquiring a massive intellectual property asset.
-              </p>
-              <div class="asset-stats">
-                <div class="stat-item">
-                  <span class="stat-val">327k+</span>
-                  <span class="stat-label">Lines of Code</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-val">1,200+</span>
-                  <span class="stat-label">Source Files</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-val">5,300+</span>
-                  <span class="stat-label">Tests</span>
-                </div>
+          <div class="gems-grid">
+
+            <div class="gem-card">
+              <div class="gem-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l10 6.5v7L12 22 2 15.5v-7L12 2z"/>
+                  <polyline points="2 8.5 12 15 22 8.5"/>
+                  <polyline points="12 15 12 22"/>
+                </svg>
+              </div>
+              <div class="gem-content">
+                <h3>Zero-Config Component Catalog</h3>
+                <p>
+                  Storybook is heavy. We built a native <strong>Component Catalog</strong> at <code>/demo</code> that lives inside your app.
+                  Document your UI components in the same environment they run in. Zero setup.
+                </p>
               </div>
             </div>
 
-            <div class="asset-visual">
-              <div class="code-density-map">
-                <div class="density-row">
-                  <span class="density-folder">apps/server</span>
-                  <div class="density-bar" style="--bar-width: 85%"></div>
-                  <span class="density-count">124k LOC</span>
+            <div class="gem-card">
+              <div class="gem-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 2v6h-6"/>
+                  <path d="M3 12a9 9 0 0 1 15-6.7L21 8"/>
+                  <path d="M3 22v-6h6"/>
+                  <path d="M21 12a9 9 0 0 1-15 6.7L3 16"/>
+                </svg>
+              </div>
+              <div class="gem-content">
+                <h3>Self-Healing Config</h3>
+                <p>
+                  Stop fighting <code>tsconfig.json</code> paths.
+                  Our <code>tooling/sync</code> scripts automatically generate path aliases and references whenever you create a new package.
+                </p>
+              </div>
+            </div>
+
+            <div class="gem-card">
+              <div class="gem-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+              </div>
+              <div class="gem-content">
+                <h3>The Repository Pattern</h3>
+                <p>
+                  We don't leak SQL queries into your API routes.
+                  All data access is abstracted in <code>packages/db/repositories</code>.
+                  Clean, testable, and refactor-proof.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- AI-NATIVE -->
+      <section class="ai-section">
+        <div class="wrap">
+          <div class="ai-grid">
+            <div class="ai-content">
+              <span class="badge-ai">2026 Standard</span>
+              <h2 class="ai-title">Architecture<br>Read by <span class="hl2">AI.</span></h2>
+              <p class="ai-lead">
+                We optimized the file structure for LLMs.
+                Includes <code>.claude/CLAUDE.md</code> context files, Architecture Decision Records, and rigorous typing.
+              </p>
+              <p class="ai-sub">
+                Your AI agent (Cursor/Windsurf/Claude Code) won't get lost. It knows exactly where to put code because we documented the map.
+              </p>
+            </div>
+            <div class="ai-visual">
+              <div class="chat-interface">
+                <div class="chat-msg">
+                  <span class="avatar">You</span>
+                  <div class="chat-msg-content">
+                    <p>Add a new field to the User model.</p>
+                  </div>
                 </div>
-                <div class="density-row">
-                  <span class="density-folder">packages/core</span>
-                  <div class="density-bar" style="--bar-width: 60%"></div>
-                  <span class="density-count">82k LOC</span>
-                </div>
-                <div class="density-row">
-                  <span class="density-folder">packages/ui</span>
-                  <div class="density-bar" style="--bar-width: 45%"></div>
-                  <span class="density-count">56k LOC</span>
-                </div>
-                <div class="density-row">
-                  <span class="density-folder">apps/desktop</span>
-                  <div class="density-bar" style="--bar-width: 30%"></div>
-                  <span class="density-count">35k LOC</span>
-                </div>
-                <div class="density-note">
-                  * Actual source code. Excludes node_modules.
+                <div class="chat-msg">
+                  <span class="avatar robot">AI</span>
+                  <div class="chat-msg-content">
+                    <p>I see you're using the <strong>Hexagonal Pattern</strong>. I will:</p>
+                    <ul class="ai-steps">
+                      <li>1. Update <code>packages/db/schema/users.ts</code></li>
+                      <li>2. Regenerate <code>packages/contracts/src/users.ts</code></li>
+                      <li>3. Update <code>apps/server/src/modules/users</code></li>
+                    </ul>
+                    <div class="ai-status">Context Loaded: <code>docs/specs/architecture.md</code></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1433,6 +1162,19 @@
           <h2 class="section-title">Invest in Infrastructure</h2>
           <p class="section-lead">One purchase, lifetime ownership.</p>
 
+          <!-- Value Calculator -->
+          <div class="value-calculation">
+            <div class="calc-row">
+              <span class="calc-label">Senior Architect (6+ months)</span>
+              <span class="calc-val calc-val--crossed">$120,000</span>
+            </div>
+            <div class="calc-row calc-row--highlight">
+              <span class="calc-label">BSLT Pro License</span>
+              <span class="calc-val">$999</span>
+            </div>
+            <p class="calc-note">You are acquiring millions in R&D for the price of a laptop.</p>
+          </div>
+
           <!-- Pricing Grid -->
           <div class="pricing-grid">
             <!-- Standard Tier -->
@@ -1440,7 +1182,7 @@
               <div class="price-card-header">
                 <div class="price-card-name">Standard</div>
                 <div class="price-card-amount">
-                  <span class="price">$250</span>
+                  <span class="price">$499</span>
                   <span class="price-period">one-time</span>
                 </div>
               </div>
@@ -1450,7 +1192,7 @@
                 <li>Optimistic SDK</li>
                 <li>Lifetime updates</li>
               </ul>
-              <a class="price-cta" href="https://app.blst.dev/checkout?plan=standard&billing=lifetime">
+              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=standard&billing=lifetime">
                 Buy License
               </a>
             </div>
@@ -1461,7 +1203,7 @@
               <div class="price-card-header">
                 <div class="price-card-name">Pro</div>
                 <div class="price-card-amount">
-                  <span class="price">$500</span>
+                  <span class="price">$999</span>
                   <span class="price-period">one-time</span>
                 </div>
               </div>
@@ -1471,27 +1213,29 @@
                 <li>Multi-Tenancy (Teams)</li>
                 <li>RBAC &amp; Audit Logs</li>
               </ul>
-              <a class="price-cta" href="https://app.blst.dev/checkout?plan=pro&billing=lifetime">
+              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=pro&billing=lifetime">
                 Buy License
               </a>
             </div>
 
-            <!-- Team Tier -->
-            <div class="price-card" data-price-tier="team">
+            <!-- Agency Tier -->
+            <div class="price-card" data-price-tier="agency">
               <div class="price-card-header">
-                <div class="price-card-name">Team</div>
+                <div class="price-card-name">Agency / OEM</div>
                 <div class="price-card-amount">
-                  <span class="price">$900</span>
+                  <span class="price">$4,995</span>
                   <span class="price-period">one-time</span>
                 </div>
               </div>
+              <div class="price-card-desc">For Dev Shops &amp; Venture Studios</div>
               <ul class="price-card-features">
-                <li>Everything in Pro</li>
-                <li>5 developer seats</li>
-                <li>Priority support</li>
+                <li><strong>Unlimited Commercial Projects</strong></li>
+                <li><strong>Client License Transfer</strong> (agency work)</li>
+                <li>White-label (remove branding)</li>
                 <li>Private Discord channel</li>
+                <li>1-hour onboarding call</li>
               </ul>
-              <a class="price-cta" href="https://app.blst.dev/checkout?plan=team&billing=lifetime">
+              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=agency&billing=lifetime">
                 Buy License
               </a>
             </div>
@@ -1501,16 +1245,18 @@
               <div class="price-card-header">
                 <div class="price-card-name">Enterprise</div>
                 <div class="price-card-amount">
-                  <span class="price">$5,000</span>
-                  <span class="price-period">starting</span>
+                  <span class="price">Custom</span>
+                  <span class="price-period">tailored</span>
                 </div>
               </div>
+              <div class="price-card-desc">For Series A+ Startups</div>
               <ul class="price-card-features">
+                <li>Everything in Agency</li>
                 <li>White-glove setup</li>
                 <li>Custom integrations</li>
-                <li>Architecture review</li>
+                <li>4-hour architecture review</li>
               </ul>
-              <a class="price-cta" href="mailto:hello@blst.dev">
+              <a class="price-cta" href="mailto:hello@bslt.dev">
                 Contact Us
               </a>
             </div>
@@ -1552,7 +1298,7 @@
             </a>
             <p class="open-source-note">
               The basic template includes the core monorepo structure, auth scaffolding, and development setup.
-              Upgrade anytime to unlock multi-tenancy, SSO, and premium infrastructure.
+              Upgrade anytime—pay the difference to unlock Electron, multi-tenancy, and premium infrastructure.
             </p>
           </div>
         </div>
@@ -1564,7 +1310,7 @@
           <h2 class="section-title section-title--spaced">Questions?</h2>
 
           <details>
-            <summary>What tech stack does BLST use?</summary>
+            <summary>What tech stack does BSLT use?</summary>
             <p>
               TypeScript everywhere: React + Vite for the frontend, Fastify for the API,
               PostgreSQL with Drizzle ORM, and Docker for local development. All wired
@@ -1576,7 +1322,7 @@
             <summary>Can I use this for client projects?</summary>
             <p>
               Yes! Your license allows unlimited projects for yourself or your clients.
-              The only restriction is you can't resell BLST as a boilerplate itself.
+              The only restriction is you can't redistribute BSLT as a template or starter kit.
             </p>
           </details>
 
@@ -1592,7 +1338,7 @@
             <summary>Is there a refund policy?</summary>
             <p>
               All purchases are final and non-refundable. We recommend reviewing the documentation
-              and GitHub repo before purchasing to ensure BLST is right for your needs.
+              and GitHub repo before purchasing to ensure BSLT is right for your needs.
             </p>
           </details>
         </div>
@@ -1618,24 +1364,24 @@
                 <path d="M5,14 L9,18 L7,22" stroke="url(#magma-glow)" stroke-width="1.5" fill="none"/>
                 <path d="M27,14 L23,18 L25,22" stroke="url(#magma-glow)" stroke-width="1.5" fill="none"/>
               </svg>
-              <span>BLST</span>
+              <span>BSLT</span>
             </div>
             <p class="footer-tagline">
               The SaaS Engine for serious engineers. Infrastructure, not templates.
             </p>
             <!-- Social Links -->
             <div class="footer-social">
-              <a href="https://twitter.com/blst_dev" target="_blank" rel="noopener" aria-label="Twitter">
+              <a href="https://twitter.com/bslt_dev" target="_blank" rel="noopener" aria-label="Twitter">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </a>
-              <a href="https://discord.gg/blst" target="_blank" rel="noopener" aria-label="Discord">
+              <a href="https://discord.gg/bslt" target="_blank" rel="noopener" aria-label="Discord">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/>
                 </svg>
               </a>
-              <a href="https://github.com/blst-dev/blst" target="_blank" rel="noopener" aria-label="GitHub">
+              <a href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                 </svg>
@@ -1655,9 +1401,9 @@
           <div>
             <div class="footer-heading">Resources</div>
             <div class="footer-links">
-              <a href="https://docs.blst.dev" target="_blank" rel="noopener">Documentation</a>
-              <a href="https://github.com/blst-dev/blst" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://discord.gg/blst" target="_blank" rel="noopener">Discord</a>
+              <a href="https://docs.bslt.dev" target="_blank" rel="noopener">Documentation</a>
+              <a href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://discord.gg/bslt" target="_blank" rel="noopener">Discord</a>
             </div>
           </div>
 
@@ -1671,7 +1417,7 @@
         </div>
 
         <div class="footer-bottom">
-          <span>© <span id="year"></span> BLST. All rights reserved.</span>
+          <span>© <span id="year"></span> BSLT. All rights reserved.</span>
           <span class="footer-shortcuts">Press <kbd>G</kbd> for GitHub, <kbd>D</kbd> for Docs, <kbd>⌘K</kbd> for commands</span>
         </div>
       </div>

@@ -99,7 +99,7 @@
   color: var(--color-muted);
 }
 
-.race-lane--blst .race-lane-icon {
+.race-lane--bslt .race-lane-icon {
   background: linear-gradient(135deg, var(--color-magma), var(--color-magma-deep));
   color: var(--color-text);
 }
@@ -170,7 +170,7 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3));
 }
 
-.race-lane--blst .race-progress-fill {
+.race-lane--bslt .race-progress-fill {
   background: linear-gradient(90deg, var(--color-magma), var(--color-magma-deep));
   box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
   animation: progress-glow 1.5s ease-in-out infinite;
@@ -204,7 +204,7 @@
     transition: none;
   }
 
-  .race-lane--blst .race-progress-fill {
+  .race-lane--bslt .race-progress-fill {
     animation: none;
   }
 
