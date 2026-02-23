@@ -13,6 +13,17 @@ interface ChangelogEntry {
 /** Changelog data (inline for static site) */
 const CHANGELOG: ChangelogEntry[] = [
   {
+    version: '1.1.0',
+    date: '2026-02-23',
+    changes: [
+      'Repositioned product as one monorepo with two lanes (MVP fast + scale later)',
+      'Updated messaging around thin canonical starter and no-copy template strategy',
+      'Set Railway as the official MVP deploy path in marketing copy',
+      'Refreshed race track narrative to show setup drift vs ready-to-ship lane',
+      'Aligned FAQ and footer with ownership and platform boundary messaging',
+    ],
+  },
+  {
     version: '1.0.0',
     date: '2026-01-15',
     changes: [
@@ -132,9 +143,7 @@ function openChangelog(): void {
     cleanupFns.push(on(closeBtn, 'click', closeChangelog));
   }
 
-  cleanupFns.push(
-    on(document as unknown as HTMLElement, 'keydown', handleKeydown)
-  );
+  cleanupFns.push(on(document as unknown as HTMLElement, 'keydown', handleKeydown));
 }
 
 /**

@@ -20,8 +20,8 @@ async function typeWriter(element: HTMLElement, text: string, speed = 50): Promi
   element.textContent = '';
   element.classList.remove('typewriter--done');
 
-  for (let i = 0; i < text.length; i++) {
-    element.textContent += text[i];
+  for (const char of text) {
+    element.textContent += char;
     await sleep(speed);
   }
 
@@ -50,10 +50,10 @@ async function streamText(element: HTMLElement, text: string, speed = 15): Promi
     const isBold = part.startsWith('**') && part.endsWith('**');
     const content = isBold ? part.slice(2, -2) : part;
 
-    for (let i = 0; i < content.length; i++) {
+    for (const charValue of content) {
       const char = document.createElement('span');
       char.className = 'stream-char';
-      char.textContent = content[i];
+      char.textContent = charValue;
 
       if (isBold) {
         const strong = element.querySelector('strong:last-of-type') as HTMLElement | null;
@@ -99,8 +99,8 @@ async function streamLine(element: HTMLElement, text: string, speed = 12): Promi
     const code = document.createElement('code');
     element.appendChild(code);
 
-    for (let i = 0; i < codeMatch[2].length; i++) {
-      code.textContent += codeMatch[2][i];
+    for (const char of codeMatch[2]) {
+      code.textContent += char;
       await sleep(speed);
     }
   } else if (statusMatch) {
@@ -112,14 +112,14 @@ async function streamLine(element: HTMLElement, text: string, speed = 12): Promi
     const code = document.createElement('code');
     element.appendChild(code);
 
-    for (let i = 0; i < statusMatch[2].length; i++) {
-      code.textContent += statusMatch[2][i];
+    for (const char of statusMatch[2]) {
+      code.textContent += char;
       await sleep(speed);
     }
   } else {
     // Plain text
-    for (let i = 0; i < text.length; i++) {
-      element.textContent += text[i];
+    for (const char of text) {
+      element.textContent += char;
       await sleep(speed);
     }
   }

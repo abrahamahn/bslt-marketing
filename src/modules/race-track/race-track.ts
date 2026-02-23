@@ -10,32 +10,32 @@ interface RaceStep {
 }
 
 /**
- * DIY setup steps that show slow progress.
+ * Manual setup steps that show slow progress.
  */
 const DIY_STEPS: RaceStep[] = [
-  { text: 'Installing dependencies...', duration: 800 },
-  { text: 'Configuring ESLint...', duration: 600 },
-  { text: 'Setting up TypeScript...', duration: 700 },
-  { text: 'Adding Prettier...', duration: 400 },
-  { text: 'Configuring Jest...', duration: 600 },
-  { text: 'Fixing type errors...', duration: 900 },
-  { text: 'Setting up Stripe...', duration: 500 },
-  { text: 'Still configuring...', duration: 800 },
+  { text: 'Wiring auth from scratch...', duration: 700 },
+  { text: 'Stitching billing + webhooks...', duration: 800 },
+  { text: 'Designing job retry semantics...', duration: 700 },
+  { text: 'Patching tenant edge cases...', duration: 700 },
+  { text: 'Reconciling docs vs scripts...', duration: 600 },
+  { text: 'Chasing deployment drift...', duration: 700 },
+  { text: 'Adding observability late...', duration: 600 },
+  { text: 'Still stabilizing foundation...', duration: 900 },
 ];
 
 /**
- * Total duration for DIY lane animation.
+ * Total duration for manual lane animation.
  */
 const DIY_TOTAL_DURATION = DIY_STEPS.reduce((sum, step) => sum + step.duration, 0);
 
 /**
- * Basalt instant completion time in ms.
+ * Basalt lane completion time in ms.
  */
-const BASALT_DURATION = 400;
+const BASALT_DURATION = 450;
 
 /**
  * Initialize the race track performance visualizer.
- * Animates comparison between DIY setup and Basalt.
+ * Animates comparison between manual setup and Basalt lane.
  * @returns Cleanup function
  */
 export function initRaceTrack(): () => void {
@@ -90,11 +90,11 @@ export function initRaceTrack(): () => void {
 
     const reducedMotion = prefersReducedMotion();
 
-    // BSLT: instant completion
+    // BSLT lane: near-instant starter path
     if (reducedMotion) {
       bsltProgress.style.transition = 'none';
       bsltProgress.style.width = '100%';
-      bsltStatus.textContent = 'Done!';
+      bsltStatus.textContent = 'Lane A ready';
       bsltStatus.classList.add('race-status--done');
       bsltTime.textContent = `${BASALT_DURATION}ms`;
       bsltTime.classList.add('race-time--visible');
@@ -103,7 +103,7 @@ export function initRaceTrack(): () => void {
       bsltProgress.style.width = '100%';
 
       const bsltDone = window.setTimeout(() => {
-        bsltStatus.textContent = 'Done!';
+        bsltStatus.textContent = 'Lane A ready';
         bsltStatus.classList.add('race-status--done');
         bsltTime.textContent = `${BASALT_DURATION}ms`;
         bsltTime.classList.add('race-time--visible');
@@ -111,14 +111,13 @@ export function initRaceTrack(): () => void {
       timeouts.push(bsltDone);
     }
 
-    // DIY: slow step-by-step progress
+    // Manual setup lane: slow step-by-step progress
     let elapsed = 0;
     let stepIndex = 0;
 
     const animateDiy = (): void => {
       if (stepIndex >= DIY_STEPS.length) {
-        // Never actually finishes in the animation
-        diyStatus.textContent = 'Still working...';
+        diyStatus.textContent = 'Still refactoring...';
         diyStatus.classList.add('race-status--error');
         return;
       }
@@ -126,7 +125,7 @@ export function initRaceTrack(): () => void {
       const step = DIY_STEPS[stepIndex];
       diyStatus.textContent = step.text;
 
-      const stepProgress = ((elapsed + step.duration) / DIY_TOTAL_DURATION) * 85; // Cap at 85%
+      const stepProgress = ((elapsed + step.duration) / DIY_TOTAL_DURATION) * 85;
 
       if (reducedMotion) {
         diyProgress.style.transition = 'none';
@@ -143,9 +142,8 @@ export function initRaceTrack(): () => void {
         const nextTimeout = window.setTimeout(animateDiy, step.duration);
         timeouts.push(nextTimeout);
       } else {
-        // Show "still working" after all steps
         const finalTimeout = window.setTimeout(() => {
-          diyStatus.textContent = 'Still configuring...';
+          diyStatus.textContent = 'Still stabilizing...';
           diyStatus.classList.add('race-status--error');
         }, step.duration);
         timeouts.push(finalTimeout);
@@ -161,7 +159,6 @@ export function initRaceTrack(): () => void {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           reset();
-          // Small delay before starting
           const startTimeout = window.setTimeout(runRace, 300);
           timeouts.push(startTimeout);
         }

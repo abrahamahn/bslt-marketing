@@ -118,18 +118,18 @@
               <path d="M27,14 L23,18 L25,22" stroke="url(#magma-glow)" stroke-width="1.5" fill="none"/>
             </svg>
             <span>BSLT</span>
-            <span class="version-badge">v1.0</span>
+            <span class="version-badge">v1.1</span>
           </a>
 
           <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#open-source">Open Source</a>
             <a href="https://docs.bslt.dev" target="_blank" rel="noopener">Docs</a>
             <a href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">GitHub</a>
           </div>
 
           <div class="nav-cta">
-            <a class="btn primary" href="#pricing">Get BSLT</a>
+            <a class="btn primary" href="#open-source">Get Access</a>
           </div>
         </nav>
       </div>
@@ -143,13 +143,12 @@
             <div class="hero-content">
               <h1>The SaaS Engine for <span class="hl2">Serious Engineers</span>.</h1>
               <p class="sub">
-                We spent 1,000+ hours writing, testing, and hardening the foundation—so you can build alone like a Pro, and scale to a Team without a rewrite.
-                Deploy a Hexagonal backend, React web app, and Native Electron Desktop from one monorepo, on Day 1.
+                We built the hard parts once so you can ship MVP fast and scale later without a rewrite. Start with the thin default lane, then opt into advanced providers only when needed. Deploy a Hexagonal backend, React web app, and Native Electron Desktop from one monorepo on Day 1.
               </p>
 
               <div class="hero-actions">
-                <a class="btn primary" href="#pricing">
-                  Get the Engine
+                <a class="btn primary" href="#open-source">
+                  Get Access
                 </a>
                 <a class="btn" href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">
                   View Architecture
@@ -175,7 +174,7 @@
             <div class="hero-visual">
               <div class="race-track" aria-label="Performance comparison">
               <div class="race-track-header">
-                <span class="race-track-title">Architecture vs. Spaghetti</span>
+                <span class="race-track-title">Lane A vs. Reinventing</span>
                 <button class="race-replay" type="button" aria-label="Replay animation">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M1 4v6h6"></path>
@@ -195,7 +194,7 @@
                           <path d="M12 6v6l4 2"></path>
                         </svg>
                       </span>
-                      DIY Setup
+                      Hand-Rolled Setup
                     </span>
                     <div class="race-status">
                       <span class="race-status-text">Waiting...</span>
@@ -248,7 +247,7 @@
             <div class="audience-card audience-card--not">
               <h3 class="audience-title">Not for</h3>
               <ul class="audience-list">
-                <li>Throwaway MVPs where speed matters above everything</li>
+                <li>No-code-only teams that cannot own TypeScript code</li>
                 <li>Teams committed to fully-managed dependencies everywhere</li>
                 <li>Non-technical founders looking for no-code solutions</li>
                 <li>Marketing sites or content-only products</li>
@@ -396,20 +395,20 @@
         <div class="wrap">
           <h2 class="section-title section-title--left">The Infrastructure Gap</h2>
           <p class="section-lead section-lead--left">
-            Most startups die building the foundation. BSLT bridges the gap between "Hello World" and "Production Ready."
+            Most startups lose months in setup drift. BSLT gives you a default MVP lane now and a scale lane later in the same monorepo.
           </p>
 
           <div class="cols">
             <div class="card">
               <h3>DIY Approach</h3>
               <p>
-                Glue libraries together, debug webhooks for weeks. Reinvent the wheel. Ship nothing.
+                Assemble infra from scratch, chase doc drift, and debug webhooks/jobs while product work stalls.
               </p>
             </div>
             <div class="card card--featured">
               <h3>The BSLT Standard</h3>
               <p>
-                Inherit a production-ready <strong>Reference Architecture</strong>. Auth, billing, and jobs are already wired. You write business logic.
+                Start from a thin canonical starter in the monorepo. Auth, billing, jobs, and contracts are pre-wired; you keep shipping business logic.
               </p>
             </div>
           </div>
@@ -419,11 +418,9 @@
       <!-- OWNERSHIP -->
       <section id="compare" class="ownership-section">
         <div class="wrap">
-          <h2 class="section-title section-title--left">Choose Ownership<br><span class="hl2">When It Matters.</span></h2>
+          <h2 class="section-title section-title--left">One Monorepo.<br><span class="hl2">Two Product Lanes.</span></h2>
           <p class="section-lead section-lead--left">
-            Managed services are great for speed early. Ownership helps when you need cost control, portability, or deeper customization.
-            BSLT gives you <strong>both options</strong>—start managed, migrate to self-hosted when ready.
-            BSLT gives you that architecture on Day 1.
+            Lane A is the default: ship MVP fast with one workflow, one env template, and one deploy path. Lane B is opt-in: add deeper providers, infra modules, and platform controls when scale actually demands it.
           </p>
 
           <div class="compare-grid">
@@ -467,13 +464,13 @@
               </div>
               <div class="compare-body">
                 <p class="compare-pain">
-                  You build the MVP, then spend 4 months refactoring because you skipped the infra.
+                  You ship quickly, then pay the rewrite tax because the starter was never designed to scale.
                 </p>
                 <ul class="compare-list">
-                  <li class="negative">2-6 months to MVP</li>
-                  <li class="negative">Spaghetti code architecture</li>
-                  <li class="negative">Zero documentation</li>
-                  <li class="negative">"We'll fix the tests later"</li>
+                  <li class="negative">Fast start, slow rewrite cycle</li>
+                  <li class="negative">Feature work blocked by infra debt</li>
+                  <li class="negative">Docs and scripts drift apart</li>
+                  <li class="negative">Reliability work postponed until production</li>
                 </ul>
               </div>
             </div>
@@ -489,17 +486,17 @@
                   </svg>
                 </div>
                 <h3>The BSLT Standard</h3>
-                <span class="compare-sub">Ownership-First Architecture</span>
+                <span class="compare-sub">MVP Fast + Scale Later</span>
               </div>
               <div class="compare-body">
                 <p class="compare-pain">
-                  A complete foundation with <strong>5,000+ tests</strong>, full type safety, and provider-swappable infrastructure.
+                  A complete foundation with <strong>5,000+ tests</strong>, thin starter defaults, and provider-swappable infrastructure behind clear boundaries.
                 </p>
                 <ul class="compare-list">
-                  <li class="positive"><strong>Internal Package Architecture</strong></li>
-                  <li class="positive">Dedicated Media & Audit Engines</li>
-                  <li class="positive">Terraform & Docker Ready</li>
-                  <li class="positive">Native Electron Desktop</li>
+                  <li class="positive"><strong>Clear Platform vs App split</strong></li>
+                  <li class="positive">Canonical starter app as source of truth</li>
+                  <li class="positive">Idempotent jobs + webhook guardrail design</li>
+                  <li class="positive">Railway-first deploy path with runbooks</li>
                 </ul>
               </div>
             </div>
@@ -535,8 +532,8 @@
             <div class="asset-text">
               <h2 class="asset-title">14 Production Modules.<br><span class="hl2">Day One.</span></h2>
               <p class="asset-lead">
-                Auth, Billing, Media, Search, Admin, Desktop—all production-ready and documented.
-                You aren't buying a starter kit; you're acquiring a <strong>complete product foundation</strong>.
+                Auth, Billing, Media, Search, Admin, Desktop - production modules with explicit extension boundaries.
+                Start thin, then turn on platform depth as needed.
               </p>
               <div class="asset-stats">
                 <div class="stat-item">
@@ -1392,132 +1389,6 @@
         </div>
       </section>
 
-      <!-- PRICING -->
-      <section id="pricing">
-        <div class="wrap">
-          <h2 class="section-title">Invest in Infrastructure</h2>
-          <p class="section-lead">One purchase, lifetime ownership.</p>
-
-          <!-- Value Calculator -->
-          <div class="value-calculation">
-            <div class="calc-row">
-              <span class="calc-label">Senior Architect (6+ months)</span>
-              <span class="calc-val calc-val--crossed">$120,000</span>
-            </div>
-            <div class="calc-row calc-row--highlight">
-              <span class="calc-label">BSLT Pro License</span>
-              <span class="calc-val">$999</span>
-            </div>
-            <p class="calc-note">You are acquiring millions in R&D for the price of a laptop.</p>
-          </div>
-
-          <!-- Pricing Grid -->
-          <div class="pricing-grid">
-            <!-- Standard Tier -->
-            <div class="price-card" data-price-tier="standard">
-              <div class="price-card-header">
-                <div class="price-card-name">Standard</div>
-                <div class="price-card-amount">
-                  <span class="price">$499</span>
-                  <span class="price-period">one-time</span>
-                </div>
-              </div>
-              <ul class="price-card-features">
-                <li>Hexagonal Backend</li>
-                <li>React Web App</li>
-                <li>Optimistic SDK</li>
-                <li>Lifetime updates</li>
-              </ul>
-              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=standard&billing=lifetime">
-                Buy License
-              </a>
-            </div>
-
-            <!-- Pro Tier -->
-            <div class="price-card featured" data-price-tier="pro">
-              <span class="price-card-highlight">Most Popular</span>
-              <div class="price-card-header">
-                <div class="price-card-name">Pro</div>
-                <div class="price-card-amount">
-                  <span class="price">$999</span>
-                  <span class="price-period">one-time</span>
-                </div>
-              </div>
-              <ul class="price-card-features">
-                <li>Everything in Standard</li>
-                <li>Electron Desktop App</li>
-                <li>Multi-Tenancy (Teams)</li>
-                <li>RBAC &amp; Audit Logs</li>
-              </ul>
-              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=pro&billing=lifetime">
-                Buy License
-              </a>
-            </div>
-
-            <!-- Agency Tier -->
-            <div class="price-card" data-price-tier="agency">
-              <div class="price-card-header">
-                <div class="price-card-name">Agency / OEM</div>
-                <div class="price-card-amount">
-                  <span class="price">$4,995</span>
-                  <span class="price-period">one-time</span>
-                </div>
-              </div>
-              <div class="price-card-desc">For Dev Shops &amp; Venture Studios</div>
-              <ul class="price-card-features">
-                <li><strong>Unlimited Commercial Projects</strong></li>
-                <li><strong>Client License Transfer</strong> (agency work)</li>
-                <li>White-label (remove branding)</li>
-                <li>Private Discord channel</li>
-                <li>1-hour onboarding call</li>
-              </ul>
-              <a class="price-cta" href="https://app.bslt.dev/checkout?plan=agency&billing=lifetime">
-                Buy License
-              </a>
-            </div>
-
-            <!-- Enterprise Tier -->
-            <div class="price-card" data-price-tier="enterprise">
-              <div class="price-card-header">
-                <div class="price-card-name">Enterprise</div>
-                <div class="price-card-amount">
-                  <span class="price">Custom</span>
-                  <span class="price-period">tailored</span>
-                </div>
-              </div>
-              <div class="price-card-desc">For Series A+ Startups</div>
-              <ul class="price-card-features">
-                <li>Everything in Agency</li>
-                <li>White-glove setup</li>
-                <li>Custom integrations</li>
-                <li>4-hour architecture review</li>
-              </ul>
-              <a class="price-cta" href="mailto:hello@bslt.dev">
-                Contact Us
-              </a>
-            </div>
-          </div>
-
-          <!-- Trust Signals -->
-          <div class="pricing-trust">
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span>Lifetime access, one-time payment</span>
-            </div>
-            <div class="trust-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                <line x1="1" y1="10" x2="23" y2="10"></line>
-              </svg>
-              <span>Secure checkout via Stripe</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- FREE & OPEN SOURCE -->
       <section id="open-source">
         <div class="wrap">
@@ -1533,8 +1404,8 @@
               View on GitHub
             </a>
             <p class="open-source-note">
-              The basic template includes the core monorepo structure, auth scaffolding, and development setup.
-              Upgrade anytime—pay the difference to unlock Electron, multi-tenancy, and premium infrastructure.
+              The community edition gives you the thin monorepo starter path.
+              Upgrade when you need advanced modules, enterprise controls, and deeper platform tooling.
             </p>
           </div>
         </div>
@@ -1558,7 +1429,7 @@
             <summary>Can I use this for client projects?</summary>
             <p>
               Yes! Your license allows unlimited projects for yourself or your clients.
-              The only restriction is you can't redistribute BSLT as a template or starter kit.
+              You can use it for client work, but you cannot resell BSLT itself as a competing starter product.
             </p>
           </details>
 
@@ -1603,7 +1474,7 @@
               <span>BSLT</span>
             </div>
             <p class="footer-tagline">
-              The SaaS Engine for serious engineers. Infrastructure, not templates.
+              The SaaS Engine for serious engineers. One monorepo, MVP fast now, scale later.
             </p>
             <!-- Social Links -->
             <div class="footer-social">
@@ -1629,7 +1500,7 @@
             <div class="footer-heading">Product</div>
             <div class="footer-links">
               <a href="#features">Features</a>
-              <a href="#pricing">Pricing</a>
+              <a href="#open-source">Open Source</a>
               <a href="#faq">FAQ</a>
             </div>
           </div>

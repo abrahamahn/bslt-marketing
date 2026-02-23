@@ -23,17 +23,17 @@ const INTEGRATIONS: Integration[] = [
   { id: 'magic', name: 'Magic Links', category: 'Auth', description: 'Passwordless email authentication' },
   { id: 'mfa', name: 'MFA', category: 'Auth', description: 'TOTP-based two-factor authentication' },
   // Ops
-  { id: 'docker', name: 'Docker', category: 'Ops', description: 'Multi-stage builds, 80MB production images' },
-  { id: 'railway', name: 'Railway', category: 'Ops', description: 'One-click deploy, automatic scaling' },
-  { id: 'vercel', name: 'Vercel', category: 'Ops', description: 'Edge deployment, serverless functions' },
+  { id: 'docker', name: 'Docker', category: 'Ops', description: 'Multi-stage builds, production-ready images' },
+  { id: 'railway', name: 'Railway', category: 'Ops', description: 'Official MVP deploy path: web, API, workers, Postgres' },
+  { id: 'vercel', name: 'Vercel', category: 'Ops', description: 'Optional edge frontend deployment' },
   { id: 'aws', name: 'AWS S3', category: 'Ops', description: 'File uploads, presigned URLs, CDN ready' },
   // Data
   { id: 'postgresql', name: 'PostgreSQL', category: 'Data', description: 'Production database with Drizzle ORM' },
-  { id: 'redis', name: 'Redis', category: 'Data', description: 'Session storage, caching, rate limiting' },
+  { id: 'redis', name: 'Redis', category: 'Data', description: 'Caching, queues, and rate limiting (scale lane)' },
   // Tools
   { id: 'posthog', name: 'PostHog', category: 'Tools', description: 'Product analytics, feature flags, A/B tests' },
-  { id: 'sentry', name: 'Sentry', category: 'Tools', description: 'Error tracking, performance monitoring' },
-  { id: 'resend', name: 'Resend', category: 'Tools', description: 'Transactional emails, React email templates' },
+  { id: 'sentry', name: 'Sentry', category: 'Tools', description: 'Error tracking and release health' },
+  { id: 'resend', name: 'Resend', category: 'Tools', description: 'Transactional emails and templates' },
 ];
 
 /**
