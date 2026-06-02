@@ -14,13 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Production-ready TypeScript SaaS engine with Hexagonal architecture. React, Fastify, Electron desktop, and 14 pre-built modules. Own your stack, ship faster."
+      content="Clone-and-own TypeScript SaaS starter with React 19, Vite, Fastify, PostgreSQL, generated contracts, workspaces, Docker, and opt-in recipes."
     />
-    <meta name="keywords" content="typescript boilerplate, saas starter kit, react boilerplate, electron starter, fastify template, hexagonal architecture, monorepo starter, fullstack typescript, saas template, node.js boilerplate" />
+    <meta name="keywords" content="typescript boilerplate, saas starter kit, react boilerplate, vite starter, fastify template, postgres starter, monorepo starter, fullstack typescript, saas template, node.js boilerplate" />
     <meta name="author" content="BSLT" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0a0a0a" />
-    <title>BSLT - TypeScript SaaS Engine | React, Fastify, Electron Starter Kit</title>
+    <title>BSLT - Clone-and-Own TypeScript SaaS Starter</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='m' x1='0%25' y1='100%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23dc2626'/%3E%3Cstop offset='50%25' stop-color='%23ff6b35'/%3E%3Cstop offset='100%25' stop-color='%23ff8c5a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon points='16,1 30,9 30,23 16,31 2,23 2,9' fill='url(%23m)'/%3E%3Cpolygon points='16,1 30,9 16,13 2,9' fill='%233a3a3a'/%3E%3Cpolygon points='2,9 16,13 16,27 2,23' fill='%232a2a2a'/%3E%3Cpolygon points='30,9 30,23 16,27 16,13' fill='%231a1a1a'/%3E%3Cpath d='M10,5 L13,7 L16,13' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M5,14 L9,18 L7,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3Cpath d='M27,14 L23,18 L25,22' stroke='url(%23m)' stroke-width='1.5' fill='none'/%3E%3C/svg%3E" />
     <link rel="canonical" href="https://bslt.dev/" />
@@ -43,10 +43,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bslt.dev/" />
     <meta property="og:site_name" content="BSLT" />
-    <meta property="og:title" content="BSLT - The TypeScript SaaS Engine for Serious Engineers" />
+    <meta property="og:title" content="BSLT - Clone-and-Own TypeScript SaaS Starter" />
     <meta
       property="og:description"
-      content="14 production modules. React + Fastify + Electron. Hexagonal architecture. No vendor lock-in. Ship your SaaS in days, not months."
+      content="React 19 + Vite, Fastify, PostgreSQL, generated contracts, workspaces, Docker, and opt-in recipes. Own the code, ship faster."
     />
     <meta property="og:image" content="https://bslt.dev/images/og-social.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -54,10 +54,10 @@
     <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@bslt_dev" />
-    <meta name="twitter:title" content="BSLT - TypeScript SaaS Engine" />
+    <meta name="twitter:title" content="BSLT - TypeScript SaaS Starter" />
     <meta
       name="twitter:description"
-      content="14 production modules. React + Fastify + Electron. No vendor lock-in. Ship your SaaS in days, not months."
+      content="A clone-and-own SaaS starter: React 19 + Vite, Fastify, PostgreSQL, generated contracts, workspaces, Docker, and recipes."
     />
     <meta name="twitter:image" content="https://bslt.dev/images/og-social.jpg" />
 
@@ -67,19 +67,14 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "BSLT",
-        "alternateName": "BSLT SaaS Engine",
-        "description": "Production-ready TypeScript SaaS engine with Hexagonal architecture. Includes React frontend, Fastify backend, Electron desktop app, and 14 pre-built modules.",
+        "alternateName": "BSLT SaaS Starter",
+        "description": "Clone-and-own TypeScript SaaS starter with React 19, Vite, Fastify, PostgreSQL, generated contracts, workspaces, Docker, and opt-in recipes.",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Windows, macOS, Linux",
         "programmingLanguage": "TypeScript",
         "url": "https://bslt.dev",
         "screenshot": "https://bslt.dev/images/og-social.jpg",
-        "featureList": "Hexagonal Architecture, React 19, Fastify 5, Electron Desktop, TypeScript, PostgreSQL, JWT Auth, Multi-tenancy, Turborepo Monorepo",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "ratingCount": "14"
-        }
+        "featureList": "React 19, Vite, Fastify, TypeScript, PostgreSQL, Email Password Auth, Workspaces, Generated API Clients, Turborepo Monorepo, Docker Compose, Terraform Guides, Optional Recipes"
       }
     </script>
   </head>
@@ -134,9 +129,9 @@
         <div class="wrap">
           <div class="hero-grid">
             <div class="hero-content">
-              <h1>The SaaS Engine for <span class="hl2">Serious Engineers</span>.</h1>
+              <h1>The SaaS Starter for <span class="hl2">Serious Engineers</span>.</h1>
               <p class="sub">
-                We built the hard parts once so you can ship MVP fast and scale later without a rewrite. Start with the thin default lane, then opt into advanced providers only when needed. Deploy a Hexagonal backend, React web app, and Native Electron Desktop from one monorepo on Day 1.
+                Start with the thin starter lane: React 19 + Vite, Fastify, PostgreSQL, email/password auth, workspaces, user settings, generated contracts, and deploy guardrails. When the product needs more, opt into recipes for billing, advanced auth, workers, and deeper admin surfaces.
               </p>
 
               <div class="hero-actions">
@@ -215,9 +210,9 @@
               <h3 class="audience-title">Built for</h3>
               <ul class="audience-list">
                 <li>Solo founders and small teams shipping SaaS products</li>
-                <li>Devs who can build features but hate rebuilding auth/billing/jobs</li>
-                <li>Apps that need background jobs, webhooks, and audit logs</li>
-                <li>Teams who want web + desktop from one codebase</li>
+                <li>Devs who want auth, workspaces, settings, and contracts already wired</li>
+                <li>Products that need optional billing, workers, webhooks, or advanced auth later</li>
+                <li>Teams who want to own the source instead of renting a black-box stack</li>
               </ul>
             </div>
             <div class="audience-card audience-card--not">
@@ -225,8 +220,8 @@
               <ul class="audience-list">
                 <li>No-code-only teams that cannot own TypeScript code</li>
                 <li>Teams committed to fully-managed dependencies everywhere</li>
-                <li>Non-technical founders looking for no-code solutions</li>
-                <li>Marketing sites or content-only products</li>
+                <li>Products that need native desktop or mobile clients on day one</li>
+                <li>Marketing sites or content-only products without SaaS workflows</li>
               </ul>
             </div>
           </div>
@@ -260,16 +255,16 @@
               <span class="marquee-tooltip">Reliable Database</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Stripe">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Billing Recipe">
                 <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
               </svg>
-              <span class="marquee-tooltip">Payment Webhooks</span>
+              <span class="marquee-tooltip">Billing Recipe</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Tailwind CSS">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="CSS Variables">
                 <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
               </svg>
-              <span class="marquee-tooltip">Utility-First CSS</span>
+              <span class="marquee-tooltip">Tokenized CSS</span>
             </div>
             <div class="marquee-item" tabindex="0">
               <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Docker">
@@ -278,10 +273,10 @@
               <span class="marquee-tooltip">Container Ready</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="AWS">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Cloud Guides">
                 <path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 01-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 01-.287-.375 6.18 6.18 0 01-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 01-.28.104.488.488 0 01-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 01.224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 011.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 00-.735-.136 6.02 6.02 0 00-.751-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 01-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 01.32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 01.311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 01-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 01-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 01-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 00.415-.758.777.777 0 00-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 01-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 01.24.2.43.43 0 01.071.263v.375c0 .168-.064.256-.184.256a.83.83 0 01-.303-.096 3.652 3.652 0 00-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/>
               </svg>
-              <span class="marquee-tooltip">Cloud Deployment</span>
+              <span class="marquee-tooltip">Deploy Guides</span>
             </div>
             <div class="marquee-item" tabindex="0">
               <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Vite">
@@ -296,10 +291,10 @@
               <span class="marquee-tooltip">Terraform IaC</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="FFmpeg">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Media Recipe">
                 <path d="M22.3 6h-3.4V3.7a.8.8 0 00-.7-.8h-4.3c-.3 0-.6.3-.6.6V6H9.2V3.7c0-.4-.3-.7-.7-.7H4.3c-.4 0-.7.3-.7.7V6H1.7C.8 6 0 6.8 0 7.7v8.6c0 .9.8 1.7 1.7 1.7h1.9v2.3c0 .4.3.7.7.7h4.3c.4 0 .7-.3.7-.7V18h4.1v2.3c0 .3.3.6.6.6h4.3c.3 0 .6-.3.6-.6V18h3.4c.9 0 1.7-.8 1.7-1.7V7.7c0-.9-.8-1.7-1.7-1.7zM6.9 19.1H5.2v-1.1h1.7v1.1zm0-3.4H5.2v-1.1h1.7v1.1zm0-3.4H5.2v-1.1h1.7v1.1zm0-3.4H5.2V7.7h1.7v1.2zm0-3.5H5.2V4.2h1.7v1.1zm6.9 13.7h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7V7.7h1.7v1.2zm0-3.5h-1.7V4.2h1.7v1.1z"/>
               </svg>
-              <span class="marquee-tooltip">FFmpeg Engine</span>
+              <span class="marquee-tooltip">Media Recipe</span>
             </div>
             <!-- Duplicate set for seamless loop -->
             <div class="marquee-item" tabindex="0">
@@ -321,16 +316,16 @@
               <span class="marquee-tooltip">Reliable Database</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Stripe">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Billing Recipe">
                 <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.591-7.305z"/>
               </svg>
-              <span class="marquee-tooltip">Payment Webhooks</span>
+              <span class="marquee-tooltip">Billing Recipe</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Tailwind CSS">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="CSS Variables">
                 <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
               </svg>
-              <span class="marquee-tooltip">Utility-First CSS</span>
+              <span class="marquee-tooltip">Tokenized CSS</span>
             </div>
             <div class="marquee-item" tabindex="0">
               <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Docker">
@@ -339,10 +334,10 @@
               <span class="marquee-tooltip">Container Ready</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="AWS">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Cloud Guides">
                 <path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 01-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 01-.287-.375 6.18 6.18 0 01-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 01-.28.104.488.488 0 01-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 01.224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 011.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 00-.735-.136 6.02 6.02 0 00-.751-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 01-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 01.32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 01.311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 01-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 01-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 01-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 00.415-.758.777.777 0 00-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 01-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 01.24.2.43.43 0 01.071.263v.375c0 .168-.064.256-.184.256a.83.83 0 01-.303-.096 3.652 3.652 0 00-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.27-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.385.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/>
               </svg>
-              <span class="marquee-tooltip">Cloud Deployment</span>
+              <span class="marquee-tooltip">Deploy Guides</span>
             </div>
             <div class="marquee-item" tabindex="0">
               <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Vite">
@@ -357,10 +352,10 @@
               <span class="marquee-tooltip">Terraform IaC</span>
             </div>
             <div class="marquee-item" tabindex="0">
-              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="FFmpeg">
+              <svg class="marquee-logo-svg" viewBox="0 0 24 24" aria-label="Media Recipe">
                 <path d="M22.3 6h-3.4V3.7a.8.8 0 00-.7-.8h-4.3c-.3 0-.6.3-.6.6V6H9.2V3.7c0-.4-.3-.7-.7-.7H4.3c-.4 0-.7.3-.7.7V6H1.7C.8 6 0 6.8 0 7.7v8.6c0 .9.8 1.7 1.7 1.7h1.9v2.3c0 .4.3.7.7.7h4.3c.4 0 .7-.3.7-.7V18h4.1v2.3c0 .3.3.6.6.6h4.3c.3 0 .6-.3.6-.6V18h3.4c.9 0 1.7-.8 1.7-1.7V7.7c0-.9-.8-1.7-1.7-1.7zM6.9 19.1H5.2v-1.1h1.7v1.1zm0-3.4H5.2v-1.1h1.7v1.1zm0-3.4H5.2v-1.1h1.7v1.1zm0-3.4H5.2V7.7h1.7v1.2zm0-3.5H5.2V4.2h1.7v1.1zm6.9 13.7h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7v-1.1h1.7v1.1zm0-3.4h-1.7V7.7h1.7v1.2zm0-3.5h-1.7V4.2h1.7v1.1z"/>
               </svg>
-              <span class="marquee-tooltip">FFmpeg Engine</span>
+              <span class="marquee-tooltip">Media Recipe</span>
             </div>
           </div>
         </div>
@@ -384,7 +379,7 @@
             <div class="card card--featured">
               <h3>The BSLT Standard</h3>
               <p>
-                Start from a thin canonical starter in the monorepo. Auth, billing, jobs, and contracts are pre-wired; you keep shipping business logic.
+                Start from a thin canonical starter in the monorepo. Auth, workspaces, user settings, contracts, and deploy guardrails are wired; deeper platform systems stay opt-in.
               </p>
             </div>
           </div>
@@ -466,13 +461,13 @@
               </div>
               <div class="compare-body">
                 <p class="compare-pain">
-                  A complete foundation with <strong>5,000+ tests</strong>, thin starter defaults, and provider-swappable infrastructure behind clear boundaries.
+                  A clone-and-own foundation with thin starter defaults, generated API clients, focused tests, and provider boundaries that are explicit instead of hidden.
                 </p>
                 <ul class="compare-list">
                   <li class="positive"><strong>Clear Platform vs App split</strong></li>
                   <li class="positive">Canonical starter app as source of truth</li>
-                  <li class="positive">Idempotent jobs + webhook guardrail design</li>
-                  <li class="positive">Railway-first deploy path with runbooks</li>
+                  <li class="positive">Contract, client, schema, and route coverage audits</li>
+                  <li class="positive">Docker, Cloudflare, DigitalOcean, and GCP deploy paths</li>
                 </ul>
               </div>
             </div>
@@ -481,21 +476,21 @@
           <!-- Quality Bar -->
           <div class="quality-bar">
             <div class="quality-bar-item">
-              <span class="quality-number">5,300+</span>
-              <span class="quality-label">Unit & E2E Tests</span>
-              <span class="quality-meta">Colocated tests for every module. Designed to catch issues early.</span>
+              <span class="quality-number">154</span>
+              <span class="quality-label">Audited Routes</span>
+              <span class="quality-meta">Route contracts, clients, and schemas are checked for drift.</span>
             </div>
             <div class="quality-divider"></div>
             <div class="quality-bar-item">
-              <span class="quality-number">14+</span>
-              <span class="quality-label">Infra Modules</span>
-              <span class="quality-meta">Pre-built adapters for Cache, Storage, PubSub, and Queues.</span>
+              <span class="quality-number">4</span>
+              <span class="quality-label">Opt-in Recipes</span>
+              <span class="quality-meta">Billing, advanced auth, advanced admin, and workers are enabled when needed.</span>
             </div>
             <div class="quality-divider"></div>
             <div class="quality-bar-item">
-              <span class="quality-number">100%</span>
-              <span class="quality-label">JSDoc Coverage</span>
-              <span class="quality-meta">Rich IDE hover-docs for every function. Zero guessing.</span>
+              <span class="quality-number">3</span>
+              <span class="quality-label">Starter Capabilities</span>
+              <span class="quality-meta">The active starter profile keeps core, db, and system surfaces lean.</span>
             </div>
           </div>
         </div>
@@ -506,23 +501,23 @@
         <div class="wrap">
           <div class="asset-grid">
             <div class="asset-text">
-              <h2 class="asset-title">14 Production Modules.<br><span class="hl2">Day One.</span></h2>
+              <h2 class="asset-title">Starter Profile.<br><span class="hl2">Recipes When Needed.</span></h2>
               <p class="asset-lead">
-                Auth, Billing, Media, Search, Admin, Desktop - production modules with explicit extension boundaries.
-                Start thin, then turn on platform depth as needed.
+                The current starter profile enables core, db, and system capabilities by default.
+                Billing, advanced auth, workers, webhooks, and deeper admin tooling stay available as opt-in recipes and reference surfaces.
               </p>
               <div class="asset-stats">
                 <div class="stat-item">
-                  <span class="stat-val">14</span>
-                  <span class="stat-label">Production Modules</span>
+                  <span class="stat-val">3</span>
+                  <span class="stat-label">Starter Capabilities</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-val">1,200+</span>
-                  <span class="stat-label">Source Files</span>
+                  <span class="stat-val">4</span>
+                  <span class="stat-label">Documented Recipes</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-val">5,300+</span>
-                  <span class="stat-label">Tests</span>
+                  <span class="stat-val">154</span>
+                  <span class="stat-label">Audited Routes</span>
                 </div>
               </div>
             </div>
@@ -530,27 +525,27 @@
             <div class="asset-visual">
               <div class="code-density-map">
                 <div class="density-row">
-                  <span class="density-folder">apps/server</span>
+                  <span class="density-folder">main/apps/server</span>
                   <div class="density-bar" style="--bar-width: 85%"></div>
-                  <span class="density-count">6 modules</span>
+                  <span class="density-count">Fastify API</span>
                 </div>
                 <div class="density-row">
-                  <span class="density-folder">packages/core</span>
+                  <span class="density-folder">main/apps/web</span>
                   <div class="density-bar" style="--bar-width: 60%"></div>
-                  <span class="density-count">4 modules</span>
+                  <span class="density-count">React + Vite</span>
                 </div>
                 <div class="density-row">
-                  <span class="density-folder">packages/ui</span>
+                  <span class="density-folder">main/client/api</span>
                   <div class="density-bar" style="--bar-width: 45%"></div>
-                  <span class="density-count">50+ components</span>
+                  <span class="density-count">generated clients</span>
                 </div>
                 <div class="density-row">
-                  <span class="density-folder">apps/desktop</span>
+                  <span class="density-folder">main/profiles</span>
                   <div class="density-bar" style="--bar-width: 30%"></div>
-                  <span class="density-count">IPC bridge</span>
+                  <span class="density-count">starter/full/custom</span>
                 </div>
                 <div class="density-note">
-                  * Modular architecture. Delete what you don't need.
+                  * Clone the starter lane, then enable recipes as product needs grow.
                 </div>
               </div>
             </div>
@@ -562,11 +557,11 @@
       <section id="strata" class="bento-section">
         <div class="wrap">
           <div class="bento-grid">
-            <!-- Card 1: Hexagonal Core -->
+            <!-- Card 1: Starter Core -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Hexagonal Core</h3>
-                <p class="bento-card-desc">Business logic isolated from infrastructure. Swap S3 for local storage without touching your domain code.</p>
+                <h3 class="bento-card-title">Starter Profile</h3>
+                <p class="bento-card-desc">The active profile keeps the default app focused on core, db, and system capabilities, with optional modules kept behind recipe boundaries.</p>
               </div>
               <div class="bento-visual">
                 <div class="folder-tree">
@@ -574,41 +569,41 @@
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                     </svg>
-                    <span>server/</span>
+                    <span>main/</span>
                   </div>
                   <div class="folder-item folder-indent folder-item--highlight">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                     </svg>
-                    <span>modules/</span>
+                    <span>profiles/</span>
                   </div>
                   <div class="folder-item folder-indent-2">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span class="muted">domain logic</span>
+                    <span class="muted">starter | full | custom</span>
                   </div>
                   <div class="folder-item folder-indent folder-item--highlight">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                     </svg>
-                    <span>infra/</span>
+                    <span>recipes/</span>
                   </div>
                   <div class="folder-item folder-indent-2">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span class="muted">adapters (swappable)</span>
+                    <span class="muted">billing, auth, admin, workers</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2: Optimistic Data Engine -->
+            <!-- Card 2: Generated API Clients -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Optimistic Data Engine</h3>
-                <p class="bento-card-desc">Offline-first mutation queue. UI updates instantly; sync, retry, and conflict resolution handled automatically.</p>
+                <h3 class="bento-card-title">Generated API Clients</h3>
+                <p class="bento-card-desc">Server route contracts generate browser clients and React hooks, then audits check that contracts, clients, schemas, and routes stay aligned.</p>
               </div>
               <div class="bento-visual">
                 <div class="type-flow">
@@ -616,8 +611,8 @@
                     <svg class="type-flow-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zm0 18H7V5h10v14z"/>
                     </svg>
-                    <span class="type-flow-label">Client</span>
-                    <code class="type-flow-code">mutate()</code>
+                    <span class="type-flow-label">Contract</span>
+                    <code class="type-flow-code">schema</code>
                   </div>
                   <svg class="type-flow-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -626,8 +621,8 @@
                     <svg class="type-flow-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 10H6v-2h8v2zm4-4H6v-2h12v2z"/>
                     </svg>
-                    <span class="type-flow-label">Queue</span>
-                    <code class="type-flow-code">IndexedDB</code>
+                    <span class="type-flow-label">Client</span>
+                    <code class="type-flow-code">generated</code>
                   </div>
                   <svg class="type-flow-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -636,19 +631,19 @@
                     <svg class="type-flow-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
                     </svg>
-                    <span class="type-flow-label">Sync</span>
-                    <code class="type-flow-code">→ Server</code>
+                    <span class="type-flow-label">Route</span>
+                    <code class="type-flow-code">Fastify</code>
                   </div>
                 </div>
-                <p class="type-flow-caption">Works offline. Syncs when online.</p>
+                <p class="type-flow-caption">Contracts, clients, schemas, and routes are audited together.</p>
               </div>
             </div>
 
-            <!-- Card 3: Web + Desktop -->
+            <!-- Card 3: Web + API -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Web + Desktop</h3>
-                <p class="bento-card-desc">90% code reuse. Ship a PWA and a signed Electron .dmg/.exe from a single React codebase.</p>
+                <h3 class="bento-card-title">Web + API Starter</h3>
+                <p class="bento-card-desc">The default product surface is a Vite React web app backed by a Fastify API, PostgreSQL repositories, and local dev services.</p>
               </div>
               <div class="bento-visual">
                 <div class="tier-diagram">
@@ -666,8 +661,8 @@
                       <path d="M20 3H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h3l-1 1v2h12v-2l-1-1h3c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 13H4V5h16v11z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Electron Desktop</div>
-                      <div class="tier-desc">Native file system, tray, notifications</div>
+                      <div class="tier-name">Fastify API</div>
+                      <div class="tier-desc">Contracts, auth, workspaces</div>
                     </div>
                   </div>
                   <div class="tier-layer tier-layer--internal">
@@ -675,19 +670,19 @@
                       <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Shared Core</div>
-                      <div class="tier-desc">90% code reuse across platforms</div>
+                      <div class="tier-name">PostgreSQL</div>
+                      <div class="tier-desc">Custom SQL repositories</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 4: Complete Auth System -->
+            <!-- Card 4: Starter Auth -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Complete Auth System</h3>
-                <p class="bento-card-desc">Password, Magic Link, and OAuth (Apple, GitHub, Google). JWT rotation, lockout protection, and audit logging built-in.</p>
+                <h3 class="bento-card-title">Starter Auth</h3>
+                <p class="bento-card-desc">Email/password registration, verification, password reset, sessions, account settings, and workspace membership ship in the default app.</p>
               </div>
               <div class="bento-visual">
                 <div class="tier-diagram">
@@ -696,7 +691,7 @@
                       <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Password + Magic Link</div>
+                      <div class="tier-name">Email + Password</div>
                       <div class="tier-desc">Email verification, password reset</div>
                     </div>
                   </div>
@@ -705,8 +700,8 @@
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">OAuth Providers</div>
-                      <div class="tier-desc">Apple, GitHub, Google</div>
+                      <div class="tier-name">Advanced Auth Recipe</div>
+                      <div class="tier-desc">OAuth, magic links, passkeys, MFA</div>
                     </div>
                   </div>
                   <div class="tier-layer tier-layer--internal">
@@ -714,34 +709,34 @@
                       <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                     </svg>
                     <div class="tier-info">
-                      <div class="tier-name">Security Hardened</div>
-                      <div class="tier-desc">JWT rotation, lockout, audit logs</div>
+                      <div class="tier-name">Security Guardrails</div>
+                      <div class="tier-desc">Rate limits, CSRF, audit logs</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 5: Billing Integration -->
+            <!-- Card 5: Billing Recipe -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Billing Integration</h3>
-                <p class="bento-card-desc">Production-ready Stripe and PayPal. Webhooks, subscription management, and an admin billing dashboard included.</p>
+                <h3 class="bento-card-title">Billing Recipe</h3>
+                <p class="bento-card-desc">Enable billing when the product needs it. The recipe adds pricing, checkout, billing settings, provider wiring, and admin linkage.</p>
               </div>
               <div class="bento-visual">
                 <div class="terminal-list">
-                  <div class="term-line"><span class="term-green">&#10004;</span> infrastructure/billing/stripe-provider.ts</div>
-                  <div class="term-line"><span class="term-green">&#10004;</span> infrastructure/billing/paypal-provider.ts</div>
-                  <div class="term-line"><span class="term-green">&#10004;</span> modules/billing/webhooks/</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> pnpm recipes:list</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> pnpm enable billing</div>
+                  <div class="term-line"><span class="term-green">&#10004;</span> VITE_ENABLE_BILLING</div>
                 </div>
               </div>
             </div>
 
-            <!-- Card 6: Job Queue System -->
+            <!-- Card 6: Workers Recipe -->
             <div class="bento-card">
               <div class="bento-card-header">
-                <h3 class="bento-card-title">Durable Job Queue</h3>
-                <p class="bento-card-desc">PostgreSQL-backed job queue with retries, scheduled jobs, and an admin monitoring dashboard. No Redis or external services required.</p>
+                <h3 class="bento-card-title">Workers Recipe</h3>
+                <p class="bento-card-desc">Keep the starter small, then add background worker capability for retries, scheduled work, and long-running product jobs when needed.</p>
               </div>
               <div class="bento-visual">
                 <div class="folder-tree">
@@ -749,25 +744,25 @@
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z"/>
                     </svg>
-                    <span>infrastructure/jobs/</span>
+                    <span>recipes/workers/</span>
                   </div>
                   <div class="folder-item folder-indent folder-item--highlight">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.89 2-2V8l-6-6z"/>
                     </svg>
-                    <span>postgresStore.ts</span>
+                    <span>worker runtime</span>
                   </div>
                   <div class="folder-item folder-indent">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span>queueServer.ts</span>
+                    <span>retries</span>
                   </div>
                   <div class="folder-item folder-indent">
                     <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z"/>
                     </svg>
-                    <span>scheduled/loginCleanup.ts</span>
+                    <span>scheduled work</span>
                   </div>
                 </div>
               </div>
@@ -780,10 +775,9 @@
       <section class="admin-section">
         <div class="wrap">
           <div class="section-header-center">
-            <h2 class="section-title">Full Admin Panel.<br><span class="hl2">Day One.</span></h2>
+            <h2 class="section-title">Minimal Admin.<br><span class="hl2">Expanded by Recipe.</span></h2>
             <p class="section-lead">
-              Don't write SQL queries to ban users or check job statuses.
-              BSLT ships with a production-ready operations dashboard.
+              The starter keeps admin small: health, readiness, and user lookup. Enable the advanced admin recipe when you need tenants, jobs, webhooks, audit views, feature flags, or legal tooling.
             </p>
           </div>
 
@@ -854,9 +848,9 @@
                 </svg>
               </div>
               <div class="admin-content">
-                <h3>Security Audit</h3>
-                <p>View failed login attempts, potential attacks, and banned IPs in real-time.</p>
-                <code>SecurityEventsPage.tsx</code>
+                <h3>Health and Guardrails</h3>
+                <p>Expose the operational basics first: health checks, readiness checks, auth guardrails, and rate-limit posture.</p>
+                <code>admin health</code>
               </div>
             </div>
 
@@ -931,9 +925,9 @@
                 </svg>
               </div>
               <div class="admin-content">
-                <h3>Job Monitor</h3>
-                <p>See your Postgres Job Queue health. Retry failed emails or processing tasks with one click.</p>
-                <code>JobMonitorPage.tsx</code>
+                <h3>Advanced Admin Recipe</h3>
+                <p>Add jobs, webhooks, audit logs, legal records, feature flags, route diagnostics, and tenant operations when your product needs them.</p>
+                <code>pnpm enable advanced-admin</code>
               </div>
             </div>
 
@@ -1001,9 +995,9 @@
                 </svg>
               </div>
               <div class="admin-content">
-                <h3>User Management</h3>
-                <p>Impersonate users, manage subscriptions, and handle support without touching the database.</p>
-                <code>UserListPage.tsx</code>
+                <h3>User Lookup</h3>
+                <p>Start with a small authenticated admin surface for user lookup and support checks instead of a sprawling console.</p>
+                <code>admin users</code>
               </div>
             </div>
           </div>
@@ -1016,8 +1010,7 @@
           <div class="team-header">
             <h2 class="section-title">Built for the <br><span class="hl2">Growing Team.</span></h2>
             <p class="section-lead">
-              Usually, velocity drops as headcount grows. BSLT breaks that law.
-              Our architecture uses <strong>Contract-Driven Development</strong> and <strong>Automated Governance</strong> to let frontend and backend teams work in parallel without collisions.
+              BSLT keeps frontend and backend work connected through checked contracts, generated clients, route registration, and audit scripts. The repo is structured so teams can add product code without guessing where boundaries live.
             </p>
           </div>
 
@@ -1028,8 +1021,8 @@
                 <div class="contract-diagram">
                   <div class="cd-node fe">Frontend Dev</div>
                   <div class="cd-bridge">
-                    <span class="cd-label">packages/contracts</span>
-                    <span class="cd-lock">Zod Schema</span>
+                    <span class="cd-label">main/shared</span>
+                    <span class="cd-lock">Checked Schema</span>
                   </div>
                   <div class="cd-node be">Backend Dev</div>
                 </div>
@@ -1038,9 +1031,8 @@
                 <h3>Parallel Velocity</h3>
                 <p>
                   Stop saying "Is the API ready yet?"
-                  Define the interface in <code>packages/contracts</code> first.
-                  The Backend team builds the implementation. The Frontend team builds the UI using mocked types.
-                  <strong>Zero blocking dependencies.</strong>
+                  Define request and response contracts first, generate the client, then let the server route and UI move together with drift checks guarding the boundary.
+                  <strong>Fewer blocking dependencies.</strong>
                 </p>
               </div>
             </div>
@@ -1065,9 +1057,7 @@
               <div class="team-content">
                 <h3>Automated Governance</h3>
                 <p>
-                  You can't review every PR. BSLT's <code>tooling/</code> scripts enforce architectural boundaries automatically.
-                  Strict rules like "UI cannot import Database code" are checked at compile time.
-                  The architecture protects itself.
+                  You can't review every boundary by hand. BSLT's audit scripts check route contract coverage, public assets, docs links, imports, formatting, lint, types, tests, and build health.
                 </p>
               </div>
             </div>
@@ -1085,8 +1075,7 @@
               <div class="team-content">
                 <h3>Instant Onboarding</h3>
                 <p>
-                  100% JSDoc coverage and collocated tests (<code>file.ts</code> + <code>file.test.ts</code>) mean the code explains itself.
-                  A new hire can understand the business logic of <code>modules/billing</code> by reading the spec, not by pestering the founder.
+                  The repo documents the starter path, profile boundaries, deploy recipes, environment setup, and verification commands. New contributors can follow docs instead of reconstructing the system from scattered code.
                 </p>
               </div>
             </div>
@@ -1113,11 +1102,11 @@
                     <path d="M16 12l-4-4-4 4M12 16V8"/>
                   </svg>
                 </div>
-                <h3>The 1kb Router</h3>
+                <h3>Generated Route Contracts</h3>
               </div>
               <p>
-                Zero dependencies. Standard <code>History API</code> under the hood.
-                Our 150-line router in <code>packages/ui/router</code> uses the standard History API—and if you prefer react-router, swap it in 20 minutes.
+                Request and response contracts generate API clients and React hooks.
+                The route-contract audit verifies that server routes, contracts, schemas, and clients stay in sync.
               </p>
             </div>
 
@@ -1128,11 +1117,11 @@
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                   </svg>
                 </div>
-                <h3>Native Postgres Queue</h3>
+                <h3>Postgres-First Data</h3>
               </div>
               <p>
-                No Redis required. We implemented a transactional job queue directly in Postgres (<code>infrastructure/jobs</code>).
-                Zero infrastructure overhead for background tasks.
+                The default app uses PostgreSQL with custom SQL repositories.
+                Production compose adds PgBouncer and Redis where the runtime needs cache, rate limiting, or clustered guardrails.
               </p>
             </div>
 
@@ -1144,11 +1133,11 @@
                     <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
                   </svg>
                 </div>
-                <h3>Built-in Auth</h3>
+                <h3>Starter Auth</h3>
               </div>
               <p>
-                Native JWT implementation with <strong>Rotation</strong>, <strong>Reuse Detection</strong>, and <strong>Family Tracking</strong>.
-                Use it standalone, or integrate with Auth0/Clerk if you prefer managed auth.
+                Email/password auth, verification, password reset, sessions, user settings, and workspace membership are part of the starter lane.
+                Advanced auth stays opt-in.
               </p>
             </div>
 
@@ -1164,8 +1153,7 @@
                 <h3>Headless UI System</h3>
               </div>
               <p>
-                23+ Custom Hooks like <code>useVirtualScroll</code> and <code>useOptimizedMemo</code>.
-                A complete component library using CSS Variables for zero-runtime overhead.
+                Shared UI primitives, CSS variables, preview routes, and tokenized themes keep the app cohesive without adding a heavyweight design-system service.
               </p>
             </div>
           </div>
@@ -1188,7 +1176,7 @@
               </div>
               <div class="quality-content">
                 <h3 class="quality-title">Strict Type Safety</h3>
-                <p class="quality-desc">End-to-end TypeScript with zero <code>any</code> escapes. API changes break at compile time.</p>
+                <p class="quality-desc">TypeScript across web, server, shared packages, generated clients, and repo tooling.</p>
               </div>
             </div>
 
@@ -1199,8 +1187,8 @@
                 </svg>
               </div>
               <div class="quality-content">
-                <h3 class="quality-title">Zod Validation</h3>
-                <p class="quality-desc">Runtime schema validation at every boundary. Invalid data never touches your business logic.</p>
+                <h3 class="quality-title">Checked Schemas</h3>
+                <p class="quality-desc">Custom schema objects define request and response boundaries, then audits verify route coverage.</p>
               </div>
             </div>
 
@@ -1212,8 +1200,8 @@
                 </svg>
               </div>
               <div class="quality-content">
-                <h3 class="quality-title">Strict ESLint</h3>
-                <p class="quality-desc">200+ rules enforced. No <code>eslint-disable</code>, no <code>@ts-ignore</code>. Clean code by default.</p>
+                <h3 class="quality-title">CI Guardrails</h3>
+                <p class="quality-desc">Formatting, lint, type checks, template audits, docs-link checks, tests, and builds are part of the baseline.</p>
               </div>
             </div>
 
@@ -1224,8 +1212,8 @@
                 </svg>
               </div>
               <div class="quality-content">
-                <h3 class="quality-title">5,000+ Tests</h3>
-                <p class="quality-desc">Comprehensive unit, integration, and E2E coverage across all modules.</p>
+                <h3 class="quality-title">Focused Test Health</h3>
+                <p class="quality-desc">Vitest, Playwright, integration tests, and route-contract audits protect the starter's runtime paths.</p>
               </div>
             </div>
           </div>
@@ -1235,27 +1223,27 @@
       <!-- SPECS LIST -->
       <section class="specs-list-section">
         <div class="wrap">
-          <h3 class="specs-title">The "Day 1" Spec Sheet</h3>
-          <p class="specs-sub">Most starter kits skip these. We didn't.</p>
+          <h3 class="specs-title">The Starter Spec Sheet</h3>
+          <p class="specs-sub">The default lane stays small; recipes add platform depth only when needed.</p>
 
           <div class="specs-columns">
             <ul class="check-list">
-              <li><strong>Complete Auth:</strong> Password, Magic Link, OAuth (Apple, GitHub, Google).</li>
-              <li><strong>Billing Ready:</strong> Stripe + PayPal providers with webhook handlers.</li>
-              <li><strong>Job Queue:</strong> PostgreSQL-backed durable queue with scheduled jobs.</li>
-              <li><strong>Admin Dashboard:</strong> User management, billing, jobs, security events.</li>
-              <li><strong>Realtime:</strong> WebSocket PubSub with subscription management.</li>
-              <li><strong>Email System:</strong> SMTP provider with templating engine.</li>
-              <li><strong>Push Notifications:</strong> Web Push via FCM with subscription management.</li>
+              <li><strong>Web App:</strong> React 19 + Vite with authenticated dashboard, settings, and workspace UI.</li>
+              <li><strong>API:</strong> Fastify server with typed request/response contracts and route registration.</li>
+              <li><strong>Database:</strong> PostgreSQL with custom SQL repositories and migration tooling.</li>
+              <li><strong>Starter Auth:</strong> Email/password, verification, password reset, sessions, and account settings.</li>
+              <li><strong>Workspaces:</strong> Creation, switching, member list, invitations, and basic roles.</li>
+              <li><strong>Admin Basics:</strong> Health, readiness, and user lookup for admin users.</li>
+              <li><strong>Generated Clients:</strong> API clients and React hooks generated from checked contracts.</li>
             </ul>
             <ul class="check-list">
-              <li><strong>Media Pipeline:</strong> FFmpeg, image optimization, secure streaming.</li>
-              <li><strong>Search Engine:</strong> SQL full-text + Elasticsearch provider swap.</li>
-              <li><strong>Rate Limiting:</strong> Token bucket with endpoint-specific presets.</li>
-              <li><strong>Security Hardened:</strong> JWT rotation, account lockout, audit logs.</li>
-              <li><strong>Infra as Code:</strong> Terraform for DigitalOcean + GCP, Docker, Caddy.</li>
-              <li><strong>CI/CD Pipelines:</strong> GitHub Actions for deploy, rollback, security scans.</li>
-              <li><strong>Type-Safe IPC:</strong> Secured Electron bridge (<code>electron/ipc</code>).</li>
+              <li><strong>Security Guardrails:</strong> Headers, CSP, CSRF, input validation, rate limiting, and audit logging.</li>
+              <li><strong>Local Storage:</strong> Avatar/file support with local serving for development demos.</li>
+              <li><strong>Search:</strong> SQL search provider by default; alternate providers are explicit adapter work.</li>
+              <li><strong>Deploy:</strong> Docker compose, Caddy, PgBouncer, Redis, and provider guides.</li>
+              <li><strong>Recipes:</strong> Billing, advanced auth, advanced admin, and workers are opt-in.</li>
+              <li><strong>Profiles:</strong> Starter, full, and custom profiles keep feature boundaries explicit.</li>
+              <li><strong>Verification:</strong> Tests, type checks, lint, audits, docs-link checks, and production builds.</li>
             </ul>
           </div>
         </div>
@@ -1277,8 +1265,7 @@
               <div class="gem-content">
                 <h3>Zero-Config Component Catalog</h3>
                 <p>
-                  Storybook is heavy. We built a native <strong>Component Catalog</strong> at <code>/demo</code> that lives inside your app.
-                  Document your UI components in the same environment they run in. Zero setup.
+                  The web app includes a UI library preview route so components can be reviewed inside the same browser environment where the product runs.
                 </p>
               </div>
             </div>
@@ -1293,10 +1280,10 @@
                 </svg>
               </div>
               <div class="gem-content">
-                <h3>Self-Healing Config</h3>
+                <h3>Synced Project Config</h3>
                 <p>
                   Stop fighting <code>tsconfig.json</code> paths.
-                  Our <code>tooling/sync</code> scripts automatically generate path aliases and references whenever you create a new package.
+                  Sync scripts keep aliases, imports, package boundaries, generated clients, and profile metadata aligned as the repo changes.
                 </p>
               </div>
             </div>
@@ -1314,8 +1301,7 @@
                 <h3>The Repository Pattern</h3>
                 <p>
                   We don't leak SQL queries into your API routes.
-                  All data access is abstracted in <code>packages/db/repositories</code>.
-                  Clean, testable, and refactor-proof.
+                  Data access lives behind custom SQL repositories in the server/database packages, keeping route handlers focused on HTTP behavior.
                 </p>
               </div>
             </div>
@@ -1332,11 +1318,10 @@
               <span class="badge-ai">2026 Standard</span>
               <h2 class="ai-title">Architecture<br>Read by <span class="hl2">Agents.</span></h2>
               <p class="ai-lead">
-                We optimized the file structure for LLMs.
-                Includes <code>.claude/CLAUDE.md</code> context files, Architecture Decision Records, and rigorous typing.
+                The repository documents its starter profile, deploy paths, contract audits, recipes, and operational guardrails so agents can navigate the codebase with concrete context.
               </p>
               <p class="ai-sub">
-                Your AI agent (Cursor/Windsurf/Claude Code) won't get lost. It knows exactly where to put code because we documented the map.
+                Your coding agent can read the same docs and verification scripts a human contributor would use.
               </p>
             </div>
             <div class="ai-visual">
@@ -1350,13 +1335,13 @@
                 <div class="chat-msg chat-msg--ai chat-msg--hidden">
                   <span class="avatar robot">Agent</span>
                   <div class="chat-msg-content">
-                    <p class="stream-text" data-text="I see you're using the **Hexagonal Pattern**. I will:"></p>
+                    <p class="stream-text" data-text="I see the starter profile and generated contract flow. I will:"></p>
                     <ul class="ai-steps">
-                      <li class="stream-line" data-text="1. Update packages/db/schema/users.ts"></li>
-                      <li class="stream-line" data-text="2. Regenerate packages/contracts/src/users.ts"></li>
-                      <li class="stream-line" data-text="3. Update apps/server/src/modules/users"></li>
+                      <li class="stream-line" data-text="1. Update the shared user contract"></li>
+                      <li class="stream-line" data-text="2. Regenerate API clients and hooks"></li>
+                      <li class="stream-line" data-text="3. Update the Fastify route and tests"></li>
                     </ul>
-                    <div class="ai-status stream-line" data-text="Context Loaded: docs/specs/architecture.md"></div>
+                    <div class="ai-status stream-line" data-text="Context Loaded: docs/TEMPLATE-PROFILE.md"></div>
                   </div>
                 </div>
               </div>
@@ -1370,18 +1355,17 @@
         <div class="wrap">
           <h2 class="section-title">Free & Open Source</h2>
           <p class="section-lead">
-            Not ready to commit? Start with the community edition.
+            Clone the starter, run the verification baseline, and make the code your own.
           </p>
           <div class="open-source-cta">
-            <a class="btn" href="https://github.com/basalt-dev/basalt" target="_blank" rel="noopener">
+            <a class="btn" href="https://github.com/bslt-dev/bslt" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
               </svg>
               View on GitHub
             </a>
             <p class="open-source-note">
-              The community edition gives you the thin monorepo starter path.
-              Upgrade when you need advanced modules, enterprise controls, and deeper platform tooling.
+              The default starter path is intentionally thin. Enable recipes when billing, advanced auth, background workers, or deeper admin operations become real product requirements.
             </p>
           </div>
         </div>
@@ -1396,32 +1380,35 @@
             <summary>What tech stack does BSLT use?</summary>
             <p>
               TypeScript everywhere: React + Vite for the frontend, Fastify for the API,
-              PostgreSQL with Drizzle ORM, and Docker for local development. All wired
-              together in a Turborepo monorepo.
+              PostgreSQL with custom SQL repositories, generated API clients, Docker for local development,
+              and Turborepo + pnpm workspaces for the monorepo.
             </p>
           </details>
 
           <details>
-            <summary>Can I use this for client projects?</summary>
+            <summary>What ships in the default starter?</summary>
             <p>
-              Yes! Your license allows unlimited projects for yourself or your clients.
-              You can use it for client work, but you cannot resell BSLT itself as a competing starter product.
+              The starter includes a Vite React app, Fastify API, PostgreSQL, email/password auth,
+              user settings, workspaces, basic admin health/user lookup, local dev services,
+              generated contracts/clients, tests, and deploy guardrails.
             </p>
           </details>
 
           <details>
-            <summary>How do updates work?</summary>
+            <summary>How do optional modules work?</summary>
             <p>
-              Starter gets 6 months of updates. Pro gets lifetime updates. Updates are
-              delivered via a private GitHub repo you get access to after purchase.
+              Optional systems live as recipes and reference surfaces. Use commands like
+              <code>pnpm recipes:list</code> and <code>pnpm enable billing</code> to opt into
+              billing, advanced auth, advanced admin, or workers when the product needs them.
             </p>
           </details>
 
           <details>
-            <summary>Is there a refund policy?</summary>
+            <summary>How do I rename and verify a new app?</summary>
             <p>
-              All purchases are final and non-refundable. We recommend reviewing the documentation
-              and GitHub repo before purchasing to ensure BSLT is right for your needs.
+              Use the documented starter flow: bootstrap local services, rename the project with
+              <code>pnpm starter:rename</code>, enable only the needed features, then run
+              <code>pnpm starter:verify</code>, tests, type checks, lint, audits, and build.
             </p>
           </details>
         </div>
@@ -1450,7 +1437,7 @@
               <span>BSLT</span>
             </div>
             <p class="footer-tagline">
-              The SaaS Engine for serious engineers. One monorepo, MVP fast now, scale later.
+              Clone-and-own SaaS starter for serious engineers. Start thin, then enable recipes as the product grows.
             </p>
             <!-- Social Links -->
             <div class="footer-social">
@@ -1494,7 +1481,7 @@
             <div class="footer-heading">Legal</div>
             <div class="footer-links">
               <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of License</a>
+              <a href="/terms">Terms</a>
             </div>
           </div>
         </div>
