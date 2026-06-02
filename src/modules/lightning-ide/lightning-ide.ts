@@ -15,7 +15,7 @@ interface IDEFile {
  */
 const NEW_FILES: IDEFile[] = [
   { name: 'stripe.ts', type: 'file', delay: 100 },
-  { name: 'pricing-table.tsx', type: 'file', delay: 200 },
+  { name: 'billing-table.tsx', type: 'file', delay: 200 },
   { name: 'webhook-handler.ts', type: 'file', delay: 300 },
 ];
 

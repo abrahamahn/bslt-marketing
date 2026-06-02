@@ -14,11 +14,11 @@ interface CommandOption {
 /** Available commands */
 const COMMANDS: CommandOption[] = [
   {
-    id: 'pricing',
-    label: 'Go to Pricing',
-    shortcut: 'P',
+    id: 'open-source',
+    label: 'Go to Open Source',
+    shortcut: 'O',
     action: () => {
-      const el = document.getElementById('pricing');
+      const el = document.getElementById('open-source');
       el?.scrollIntoView({ behavior: 'smooth' });
     },
   },

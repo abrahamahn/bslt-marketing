@@ -19,12 +19,12 @@ const SHORTCUTS: KeyboardShortcut[] = [
     description: 'Open Documentation',
   },
   {
-    key: 'p',
+    key: 'o',
     action: () => {
-      const pricing = document.getElementById('pricing');
-      pricing?.scrollIntoView({ behavior: 'smooth' });
+      const openSource = document.getElementById('open-source');
+      openSource?.scrollIntoView({ behavior: 'smooth' });
     },
-    description: 'Go to Pricing',
+    description: 'Go to Open Source',
   },
 ];
 
@@ -32,7 +32,7 @@ const SHORTCUTS: KeyboardShortcut[] = [
  * Initialize keyboard shortcuts for developer experience.
  * - G: Open GitHub
  * - D: Open Documentation
- * - P: Go to Pricing
+ * - O: Go to Open Source
  */
 export function initKeyboardShortcuts(): () => void {
   function handleKeydown(event: KeyboardEvent): void {

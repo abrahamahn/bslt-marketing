@@ -174,9 +174,6 @@ Move away from "Auth and Payments" (generic) to "Web, Desktop, and Mobile" (uniq
   <div class="hero-actions">
     </div>
   
-  <div class="copy-command-box">
-    <code class="command-text">npx create-bslt-app@latest</code>
-    </div>
 </div>
 
 ```
@@ -306,11 +303,6 @@ The `id="year"` in the footer is empty. Add this small script at the bottom of t
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   
-  // Optional: Copy command logic
-  document.querySelector('.copy-command')?.addEventListener('click', () => {
-    navigator.clipboard.writeText('npx create-bslt-app@latest');
-    // Add visual feedback class here
-  });
 </script>
 
 ```
